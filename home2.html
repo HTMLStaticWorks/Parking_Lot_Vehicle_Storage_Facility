@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkShield | Pricing, Plans &amp; Facility Experience</title>
+  <meta name="description" content="Explore parking plans, short-term and long-term vehicle storage vault pricing, plan comparison details, and our premium security features.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+          <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Park<span>Shield</span>
+      </a>
+      
+      <nav class="nav-container">
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home 1</a></li>
+          <li class="nav-item"><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          
+          <li class="nav-item">
+            <a href="storage.html" class="nav-link">Vehicle Storage <i class="fas fa-chevron-down" style="font-size:0.75rem; margin-left:2px;"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="storage.html#short-term">Short-Term Storage</a></li>
+              <li class="dropdown-item"><a href="storage.html#long-term">Long-Term Storage</a></li>
+              <li class="dropdown-item"><a href="storage.html#premium">Premium Storage</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item"><a href="security.html" class="nav-link">Security</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link" style="border:1px solid var(--color-accent); color:var(--color-accent); padding:0.4rem 1rem;">Login</a></li>
+        </ul>
+      </nav>
+      
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Premium Cinematic Hero (Home 2) -->
+  <section class="hero-h2">
+    <div class="container hero-h2-content">
+      <div class="badge badge-accent" style="margin-bottom:1.5rem;">
+        <span class="badge-dot"></span> Smart Space Networks
+      </div>
+      <h1>Park Smarter. Store Safer. <span>Move Freely.</span></h1>
+      <p>
+        Flexible commercial rates, airport flight coordination passes, and bespoke climate storage systems built for car owners who value precision.
+      </p>
+      <div class="hero-h2-actions">
+        <a href="dashboard.html?tab=book" class="btn btn-primary">
+          <i class="fas fa-ticket-alt"></i> Reserve a Parking Slot
+        </a>
+        <a href="storage.html" class="btn btn-secondary">
+          <i class="fas fa-warehouse"></i> Explore Storage
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parking Plans (Integrated Pricing) -->
+  <section class="section-padding container" id="plans">
+    <div class="text-center">
+      <h2 class="section-title">Flexible Parking Pricing Plans</h2>
+      <p class="section-subtitle">
+        Access flat-rate parking slots across all our facilities. Pick the perfect pass structure for your personal schedule.
+      </p>
+    </div>
+    
+    <div class="pricing-grid grid">
+      <!-- Plan 1 -->
+      <div class="pricing-card glass-card">
+        <h3 class="plan-name">Hourly Parking</h3>
+        <div class="plan-price">$4.50 <span>/ hour</span></div>
+        <ul class="plan-features">
+          <li><i class="fas fa-check-circle"></i> Flexible short visits</li>
+          <li><i class="fas fa-check-circle"></i> High-definition security included</li>
+          <li><i class="fas fa-check-circle"></i> Automated entry &amp; exit gates</li>
+          <li><i class="fas fa-check-circle"></i> Live digital receipt generation</li>
+        </ul>
+        <a href="login.html" class="btn btn-secondary" style="width:100%;">Select Hourly</a>
+      </div>
+      
+      <!-- Plan 2 (Premium/Featured) -->
+      <div class="pricing-card glass-card premium-plan">
+        <div class="premium-badge">Best Value</div>
+        <h3 class="plan-name">Daily Parking</h3>
+        <div class="plan-price">$28.00 <span>/ day</span></div>
+        <ul class="plan-features">
+          <li><i class="fas fa-check-circle"></i> Full 24-hour access card</li>
+          <li><i class="fas fa-check-circle"></i> 24/7 continuous CCTV monitoring</li>
+          <li><i class="fas fa-check-circle"></i> Secure digital QR pass</li>
+          <li><i class="fas fa-check-circle"></i> Overstay extension protection</li>
+        </ul>
+        <a href="login.html" class="btn btn-primary" style="width:100%;">Select Daily Pass</a>
+      </div>
+      
+      <!-- Plan 3 -->
+      <div class="pricing-card glass-card">
+        <h3 class="plan-name">Monthly Parking</h3>
+        <div class="plan-price">$380.00 <span>/ month</span></div>
+        <ul class="plan-features">
+          <li><i class="fas fa-check-circle"></i> Dedicated, reserved custom slot</li>
+          <li><i class="fas fa-check-circle"></i> Priority gate lane scan access</li>
+          <li><i class="fas fa-check-circle"></i> Recurring automated monthly billing</li>
+          <li><i class="fas fa-check-circle"></i> Dedicated premium helpline support</li>
+        </ul>
+        <a href="login.html" class="btn btn-secondary" style="width:100%;">Select Monthly</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicle Storage Plans -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Premium Vehicle Storage Plans</h2>
+        <p class="section-subtitle">
+          Secure, dust-free environments with strict access controls. Keep your high-value vehicles in mint condition.
+        </p>
+      </div>
+      
+      <div class="pricing-grid grid">
+        <!-- Storage 1 -->
+        <div class="pricing-card glass-card">
+          <h3 class="plan-name">Short-Term Storage</h3>
+          <div class="plan-price">$15 <span>/ day</span></div>
+          <p style="color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.9rem;">
+            Ideal for business travelers flying out of terminal hubs for a few days/weeks.
+          </p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Clean, dust-controlled facility</li>
+            <li><i class="fas fa-check"></i> Continuous CCTV surveillance coverage</li>
+            <li><i class="fas fa-check"></i> Standard physical vehicle checklist</li>
+          </ul>
+          <a href="storage.html#enquiry" class="btn btn-secondary" style="width:100%;">Enquire Now</a>
+        </div>
+        
+        <!-- Storage 2 -->
+        <div class="pricing-card glass-card">
+          <h3 class="plan-name">Long-Term Storage</h3>
+          <div class="plan-price">$299 <span>/ month</span></div>
+          <p style="color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.9rem;">
+            Bespoke storage layout for classic, luxury, or seasonal project cars.
+          </p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Climate-controlled air circulation</li>
+            <li><i class="fas fa-check"></i> Multi-tiered keycard biometric entry</li>
+            <li><i class="fas fa-check"></i> Bi-weekly tire pressure monitoring</li>
+          </ul>
+          <a href="storage.html#enquiry" class="btn btn-secondary" style="width:100%;">Enquire Now</a>
+        </div>
+        
+        <!-- Storage 3 (Premium) -->
+        <div class="pricing-card glass-card premium-plan">
+          <div class="premium-badge">Collector</div>
+          <h3 class="plan-name">Premium Storage Vault</h3>
+          <div class="plan-price">$450 <span>/ month</span></div>
+          <p style="color:rgba(255,255,255,0.7); margin-bottom:1.5rem; font-size:0.9rem;">
+            For high-end supercars and collectors demanding the absolute pinnacle of vehicle care.
+          </p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check-circle"></i> Private indoor vault partition</li>
+            <li><i class="fas fa-check-circle"></i> Dedicated smart trickle charger</li>
+            <li><i class="fas fa-check-circle"></i> Complete premium car bubble/cover</li>
+            <li><i class="fas fa-check-circle"></i> Monthly starting &amp; engine warmup</li>
+          </ul>
+          <a href="storage.html#enquiry" class="btn btn-primary" style="width:100%;">Request Vault Space</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plan Comparison Table -->
+  <section class="section-padding container">
+    <div class="text-center">
+      <h2 class="section-title">Compare Plan Specifications</h2>
+      <p class="section-subtitle">
+        Review specific access configurations and security options to select the right Tier.
+      </p>
+    </div>
+    
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Plan Metric</th>
+            <th>Hourly Parking</th>
+            <th>Daily Parking</th>
+            <th>Monthly Parking</th>
+            <th>Premium Vault Storage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Base Price</strong></td>
+            <td>$4.50 / hour</td>
+            <td>$28.00 / day</td>
+            <td>$380.00 / month</td>
+            <td>$450.00 / month</td>
+          </tr>
+          <tr>
+            <td><strong>Security Coverage</strong></td>
+            <td>CCTV Security</td>
+            <td>CCTV + Patrols</td>
+            <td>CCTV + Floor Patrols</td>
+            <td>Private Vault + Biometric Guard</td>
+          </tr>
+          <tr>
+            <td><strong>Access Hours</strong></td>
+            <td>24/7 Gate Entry</td>
+            <td>24/7 Gate Entry</td>
+            <td>24/7 Priority Lane</td>
+            <td>Supervised Appointment</td>
+          </tr>
+          <tr>
+            <td><strong>Reserved Slot</strong></td>
+            <td><i class="fas fa-times"></i></td>
+            <td><i class="fas fa-times"></i></td>
+            <td><i class="fas fa-check"></i> Dedicated Space</td>
+            <td><i class="fas fa-check"></i> Private Vault Partition</td>
+          </tr>
+          <tr>
+            <td><strong>Digital Entry Pass</strong></td>
+            <td>QR Scan Ticket</td>
+            <td>Digital QR Pass</td>
+            <td>ANPR Scan Access</td>
+            <td>Biometric Token Card</td>
+          </tr>
+          <tr>
+            <td><strong>Billing Cycle</strong></td>
+            <td>On Departure</td>
+            <td>Prepaid / Daily</td>
+            <td>Automated Monthly</td>
+            <td>Automated Monthly</td>
+          </tr>
+          <tr>
+            <td><strong>Storage Care</strong></td>
+            <td><i class="fas fa-times"></i></td>
+            <td><i class="fas fa-times"></i></td>
+            <td><i class="fas fa-times"></i></td>
+            <td><i class="fas fa-check"></i> Charger, Detailing, Cover</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">The Industry Standard in Parking Tech</h2>
+        <p class="section-subtitle">
+          We construct state-of-the-art vehicle facilities engineered to keep your assets safe, charged, and immediately available.
+        </p>
+      </div>
+      
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-top:2rem;">
+        <div style="display:flex; gap:1.25rem;">
+          <div style="font-size:2rem; color:var(--color-accent);"><i class="fas fa-shield-halved"></i></div>
+          <div>
+            <h4 style="font-size:1.2rem; margin-bottom:0.5rem; font-weight:600;">24/7 Guard Patrols</h4>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Armed perimeter monitoring and continuous foot patrols on every park structure deck level.</p>
+          </div>
+        </div>
+        
+        <div style="display:flex; gap:1.25rem;">
+          <div style="font-size:2rem; color:var(--color-accent);"><i class="fas fa-video"></i></div>
+          <div>
+            <h4 style="font-size:1.2rem; margin-bottom:0.5rem; font-weight:600;">CCTV Monitoring</h4>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">High-definition night-vision cameras tracking every angle of incoming roads and storage bays.</p>
+          </div>
+        </div>
+        
+        <div style="display:flex; gap:1.25rem;">
+          <div style="font-size:2rem; color:var(--color-accent);"><i class="fas fa-lock"></i></div>
+          <div>
+            <h4 style="font-size:1.2rem; margin-bottom:0.5rem; font-weight:600;">Controlled Access</h4>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Electric security boom barriers that integrate with biometric smart-cards and ANPR software.</p>
+          </div>
+        </div>
+        
+        <div style="display:flex; gap:1.25rem;">
+          <div style="font-size:2rem; color:var(--color-accent);"><i class="fas fa-qrcode"></i></div>
+          <div>
+            <h4 style="font-size:1.2rem; margin-bottom:0.5rem; font-weight:600;">Digital Passes</h4>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Quick-generate QR entries stored in your mobile phone wallet for touchless, instant scan verification.</p>
+          </div>
+        </div>
+        
+        <div style="display:flex; gap:1.25rem;">
+          <div style="font-size:2rem; color:var(--color-accent);"><i class="fas fa-charging-station"></i></div>
+          <div>
+            <h4 style="font-size:1.2rem; margin-bottom:0.5rem; font-weight:600;">EV Fast Chargers</h4>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Reserve Level-2 EV charging bays so you return to a fully-charged automobile.</p>
+          </div>
+        </div>
+        
+        <div style="display:flex; gap:1.25rem;">
+          <div style="font-size:2rem; color:var(--color-accent);"><i class="fas fa-mobile-screen"></i></div>
+          <div>
+            <h4 style="font-size:1.2rem; margin-bottom:0.5rem; font-weight:600;">Online Slot Booking</h4>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Modify reservations, download invoices, and register license plates from your secure portal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Facility Experience Gallery -->
+  <section class="section-padding container">
+    <div class="text-center">
+      <h2 class="section-title">The Facility Experience</h2>
+      <p class="section-subtitle">
+        Take a visual tour inside our secure, premium architectural complexes. Built for safety and designed for style.
+      </p>
+    </div>
+    
+    <div class="gallery-grid grid">
+      <!-- Item 1 -->
+      <div class="gallery-item gallery-g1">
+        <img src="parking_deck_entrance.jpg" alt="Parking Deck Entrance">
+        <div class="gallery-item-overlay">
+          <h4>Multi-Deck Parking Entrance</h4>
+        </div>
+      </div>
+      
+      <!-- Item 2 -->
+      <div class="gallery-item gallery-g2">
+        <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=600&q=80" alt="Secure Parking Slots">
+        <div class="gallery-item-overlay">
+          <h4>Premium Reserved Parking Slots</h4>
+        </div>
+      </div>
+      
+      <!-- Item 3 -->
+      <div class="gallery-item gallery-g3">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80" alt="Central Security Control Room">
+        <div class="gallery-item-overlay">
+          <h4>24/7 Security Control Center</h4>
+        </div>
+      </div>
+      
+      <!-- Item 4 -->
+      <div class="gallery-item gallery-g4">
+        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=400&q=80" alt="EV charging spots">
+        <div class="gallery-item-overlay">
+          <h4>Integrated EV Charging Bays</h4>
+        </div>
+      </div>
+      
+      <!-- Item 5 -->
+      <div class="gallery-item gallery-g5">
+        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" alt="Inside Vehicle Storage Vault">
+        <div class="gallery-item-overlay">
+          <h4>Indoor Vehicle Storage Vaults</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Booking Section -->
+  <section class="section-padding container" id="quick-book-section" style="border-top:1px solid var(--border-color); padding-top: 5rem;">
+    <div class="text-center" style="margin-bottom:3rem;">
+      <h2 class="section-title">Ready to Shield Your Vehicle?</h2>
+      <p class="section-subtitle">
+        Lock in your premium parking space or storage vault coordinates instantly.
+      </p>
+    </div>
+    <div style="max-width:550px; margin:0 auto;">
+      <!-- Quick Booking Form widget -->
+      <div class="booking-widget-box glass-card" style="padding: 2.5rem;">
+        <h3><i class="fas fa-calendar-check text-accent"></i> Reserve Your Space</h3>
+        <form action="login.html" method="GET">
+          <div class="widget-form-group">
+            <label for="booking-facility">Select Facility</label>
+            <div class="widget-input-wrapper">
+              <i class="fas fa-map-marker-alt"></i>
+              <select id="booking-facility" required>
+                <option value="airport-t3">Skyline Airport Terminal 3 (Multi-level)</option>
+                <option value="downtown-plaza">Metro Downtown Plaza Garage</option>
+                <option value="collector-vault">Secure Vehicle Storage Facility</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="widget-form-group">
+            <label for="booking-date">Arrival Date</label>
+            <div class="widget-input-wrapper">
+              <i class="fas fa-calendar-day"></i>
+              <input type="date" id="booking-date" required value="2026-08-15">
+            </div>
+          </div>
+          
+          <div class="form-two-col" style="gap:1rem; margin-bottom:0;">
+            <div class="widget-form-group">
+              <label for="booking-time">Entry Time</label>
+              <div class="widget-input-wrapper">
+                <i class="fas fa-clock"></i>
+                <input type="time" id="booking-time" required value="10:00">
+              </div>
+            </div>
+            <div class="widget-form-group">
+              <label for="booking-duration">Duration</label>
+              <div class="widget-input-wrapper">
+                <i class="fas fa-hourglass-half"></i>
+                <select id="booking-duration" required>
+                  <option value="2h">2 Hours</option>
+                  <option value="4h">4 Hours</option>
+                  <option value="8h">8 Hours</option>
+                  <option value="1d">1 Day</option>
+                  <option value="3d">3 Days</option>
+                  <option value="1w">1 Week</option>
+                  <option value="1m">1 Month</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="widget-form-group">
+            <label for="booking-vehicle">Vehicle Type</label>
+            <div class="widget-input-wrapper">
+              <i class="fas fa-car"></i>
+              <select id="booking-vehicle" required>
+                <option value="sedan">Sedan / Hatchback</option>
+                <option value="suv">SUV / Pickup Truck</option>
+                <option value="ev">Electric Vehicle (EV Charger needed)</option>
+                <option value="sports">Premium Sports/Supercar</option>
+                <option value="accessible">Accessible (ADA Badge holder)</option>
+              </select>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">
+            <i class="fas fa-search"></i> Find Parking
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+            <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Park<span>Shield</span>
+        </a>
+        <p class="footer-description">
+          ParkShield is a state-of-the-art parking and vehicle storage network, serving commercial complexes, international airports, and private vehicle collectors.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Vehicle Storage</h4>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="storage.html#short-term">Short-Term Storage</a></li>
+          <li class="footer-link"><a href="storage.html#long-term">Climate Controlled</a></li>
+          <li class="footer-link"><a href="storage.html#premium">Premium Collector Vault</a></li>
+          <li class="footer-link"><a href="storage.html#protection">Detailing &amp; Care</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Contact &amp; Support</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+          <p>100 Airside Plaza, Terminal 3 Blvd, Airport City, AC 94012</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone footer-contact-icon"></i>
+          <p>+1 (800) 555-PARK (7275)</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope footer-contact-icon"></i>
+          <p>support@parkshield.com</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock footer-contact-icon"></i>
+          <p>Open 24 Hours / 7 Days a Week</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 ParkShield Technologies Inc. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">SLA Agreement</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkShield | Facility Locations &amp; Support Contact</title>
+  <meta name="description" content="Get in touch with ParkShield. Access terminal parking support, contact vehicle storage vault management, view operating hours, and find office locations.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+          <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Park<span>Shield</span>
+      </a>
+      
+      <nav class="nav-container">
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home 1</a></li>
+          <li class="nav-item"><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          
+          <li class="nav-item">
+            <a href="storage.html" class="nav-link">Vehicle Storage <i class="fas fa-chevron-down" style="font-size:0.75rem; margin-left:2px;"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="storage.html#short-term">Short-Term Storage</a></li>
+              <li class="dropdown-item"><a href="storage.html#long-term">Long-Term Storage</a></li>
+              <li class="dropdown-item"><a href="storage.html#premium">Premium Storage</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item"><a href="security.html" class="nav-link">Security</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link" style="border:1px solid var(--color-accent); color:var(--color-accent); padding:0.4rem 1rem;">Login</a></li>
+        </ul>
+      </nav>
+      
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="hero-contact">
+    <div class="container hero-h2-content">
+      <div class="badge badge-accent" style="margin-bottom: 1.5rem;">
+        <span class="badge-dot"></span> Get In Touch
+      </div>
+      <h1>We Are Here To Assist You</h1>
+      <p>
+        Have questions about parking rates, digital entry passes, or custom vehicle storage options? Drop us a line or visit our administrative office.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Layout Grid -->
+  <section class="container" style="margin-bottom: 5rem;">
+    <div class="contact-layout grid">
+      <!-- Contact Info Cards Column -->
+      <div class="contact-info-panel">
+        <div class="glass-card" style="padding:2rem; display:flex; gap:1.25rem;">
+          <div class="contact-info-icon"><i class="fas fa-map-location-dot"></i></div>
+          <div class="contact-info-text">
+            <h4>Facility Headquarters</h4>
+            <p>100 Airside Plaza, Terminal 3 Blvd, Airport City, AC 94012</p>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding:2rem; display:flex; gap:1.25rem;">
+          <div class="contact-info-icon"><i class="fas fa-phone-volume"></i></div>
+          <div class="contact-info-text">
+            <h4>Direct Lines</h4>
+            <p>Parking Hotline: +1 (800) 555-PARK (7275)</p>
+            <p>Storage Vault Desk: +1 (800) 555-VAULT (8285)</p>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding:2rem; display:flex; gap:1.25rem;">
+          <div class="contact-info-icon"><i class="fas fa-envelope-open"></i></div>
+          <div class="contact-info-text">
+            <h4>Email Support</h4>
+            <p>General Enquiries: info@parkshield.com</p>
+            <p>Dashboard SLA Tech: support@parkshield.com</p>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding:2rem; display:flex; gap:1.25rem;">
+          <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+          <div class="contact-info-text">
+            <h4>Operating Hours</h4>
+            <p>Parking Facilities: Open 24/7/365</p>
+            <p>Storage Vault Dropoffs: Mon - Sat, 8:00 AM - 8:00 PM</p>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding:2rem;">
+          <h4 style="margin-bottom: 1rem;">Connect With Us</h4>
+          <div class="social-links" style="display: flex; gap: 1rem;">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form Panel -->
+      <div class="glass-card contact-form-panel">
+        <h3 style="font-size:1.5rem; margin-bottom:1.5rem;"><i class="fas fa-paper-plane text-accent"></i> Send Us A Message</h3>
+        
+        <form action="#" method="POST" id="contact-form">
+          <div class="form-two-col">
+            <div class="form-group">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" class="form-input" required placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-input" required placeholder="jane@example.com">
+            </div>
+          </div>
+
+          <div class="form-two-col">
+            <div class="form-group">
+              <label for="contact-phone">Phone Number</label>
+              <input type="tel" id="contact-phone" class="form-input" placeholder="+1 (555) 019-2834">
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Topic of Enquiry</label>
+              <select id="contact-subject" class="form-input" required>
+                <option value="general">General Support</option>
+                <option value="booking">Parking Pass Modification</option>
+                <option value="storage">Storage Vault Reservation</option>
+                <option value="corporate">Corporate &amp; Fleet Contracts</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-msg">Message</label>
+            <textarea id="contact-msg" class="form-input" required placeholder="Please write details of your question here..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        
+        <!-- Submission status notice -->
+        <div id="contact-success-msg" class="glass-card" style="display:none; padding:1rem; border-color:var(--color-success); background:rgba(16,185,129,0.05); color:var(--color-success); margin-top:1rem; text-align:center; font-weight:600;">
+          <i class="fas fa-check-circle"></i> Message Sent Successfully! We will respond in 2 hours.
+        </div>
+      </div>
+    </div>
+
+    <!-- Location Map -->
+    <div class="map-container" style="border-radius: var(--radius-lg); overflow: hidden; height: 400px; border: 1px solid var(--border-color); margin-top: 3rem; background: var(--surface-light);">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.50764030635154!3d37.75781499656832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+            <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Park<span>Shield</span>
+        </a>
+        <p class="footer-description">
+          ParkShield is a state-of-the-art parking and vehicle storage network, serving commercial complexes, international airports, and private vehicle collectors.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Vehicle Storage</h4>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="storage.html#short-term">Short-Term Storage</a></li>
+          <li class="footer-link"><a href="storage.html#long-term">Climate Controlled</a></li>
+          <li class="footer-link"><a href="storage.html#premium">Premium Collector Vault</a></li>
+          <li class="footer-link"><a href="storage.html#protection">Detailing &amp; Care</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Contact &amp; Support</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+          <p>100 Airside Plaza, Terminal 3 Blvd, Airport City, AC 94012</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone footer-contact-icon"></i>
+          <p>+1 (800) 555-PARK (7275)</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope footer-contact-icon"></i>
+          <p>support@parkshield.com</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock footer-contact-icon"></i>
+          <p>Open 24 Hours / 7 Days a Week</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 ParkShield Technologies Inc. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">SLA Agreement</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Handle mock submit for demo purposes
+    const contactForm = document.getElementById('contact-form');
+    const successMsg = document.getElementById('contact-success-msg');
+    if (contactForm && successMsg) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        successMsg.style.display = 'block';
+        contactForm.reset();
+        setTimeout(() => {
+          successMsg.style.display = 'none';
+        }, 5000);
+      });
+    }
+  </script>
+</body>
+</html>

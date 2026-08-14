@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkShield | Secure Vehicle Storage Vaults</title>
+  <meta name="description" content="Secure, climate-controlled vehicle storage. Short-term and long-term private storage vault options for sports cars, luxury vehicles, and collector cars.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+          <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Park<span>Shield</span>
+      </a>
+      
+      <nav class="nav-container">
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home 1</a></li>
+          <li class="nav-item"><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          
+          <li class="nav-item">
+            <a href="storage.html" class="nav-link">Vehicle Storage <i class="fas fa-chevron-down" style="font-size:0.75rem; margin-left:2px;"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="storage.html#short-term">Short-Term Storage</a></li>
+              <li class="dropdown-item"><a href="storage.html#long-term">Long-Term Storage</a></li>
+              <li class="dropdown-item"><a href="storage.html#premium">Premium Storage</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item"><a href="security.html" class="nav-link">Security</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link" style="border:1px solid var(--color-accent); color:var(--color-accent); padding:0.4rem 1rem;">Login</a></li>
+        </ul>
+      </nav>
+      
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Storage Hero Section -->
+  <section class="hero-h1" style="background-image: linear-gradient(180deg, rgba(10, 15, 29, 0.5) 0%, rgba(10, 15, 29, 0.95) 100%), url('https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1920&q=80');">
+    <div class="container hero-h2-content">
+      <div class="badge badge-accent" style="margin-bottom:1.5rem;">
+        <span class="badge-dot"></span> Climate-Controlled Facility
+      </div>
+      <h1>Ultra-Secure <span>Vehicle Storage</span> Vaults</h1>
+      <p>
+        Dust-free, premium indoor environments designed exclusively for luxury, vintage, and performance vehicles. Complete with trickle-charge wiring, biometric access locks, and detail washing services.
+      </p>
+      <a href="#enquiry" class="btn btn-primary"><i class="fas fa-file-signature"></i> Request Storage Quote</a>
+    </div>
+  </section>
+
+  <!-- Storage Types Split Detail -->
+  <section class="section-padding container">
+    <!-- Short Term Storage -->
+    <div class="storage-grid-detail grid" id="short-term">
+      <div class="storage-image-side">
+        <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=800&q=80" alt="Secure Garage Short Term">
+        <div class="storage-badge-float">
+          <i class="fas fa-plane text-accent"></i>
+          <div>
+            <h5 style="font-size:0.85rem; margin-bottom:0.1rem;">Airport Proximity</h5>
+            <p style="font-size:0.75rem; color:var(--text-secondary);">Only 3 minutes from Terminals</p>
+          </div>
+        </div>
+      </div>
+      <div class="storage-text-side">
+        <span class="badge badge-success" style="margin-bottom:1rem;"><span class="badge-dot"></span> Under 1 Month</span>
+        <h2 style="font-size:2.25rem; margin-bottom:1rem;">Short-Term Business &amp; Travel Storage</h2>
+        <p style="color:var(--text-secondary); margin-bottom:1.5rem;">
+          Flying out for a holiday or business trip? Avoid airport element exposure. Store your vehicle in our fully enclosed, dust-free garage bays. Your vehicle will be kept locked, secure, and ready for you the minute you land.
+        </p>
+        <ul style="list-style:none; margin-bottom:2rem; display:flex; flex-direction:column; gap:0.5rem; font-size:0.95rem; color:var(--text-secondary);">
+          <li><i class="fas fa-check text-accent" style="margin-right:0.5rem;"></i> Fully indoor covered slots</li>
+          <li><i class="fas fa-check text-accent" style="margin-right:0.5rem;"></i> 24/7 security guard perimeter check cycles</li>
+          <li><i class="fas fa-check text-accent" style="margin-right:0.5rem;"></i> Airport terminal shuttle pickup options</li>
+        </ul>
+        <a href="#enquiry" class="btn btn-secondary">Request Short-Term Storage</a>
+      </div>
+    </div>
+
+    <!-- Long Term Storage -->
+    <div class="storage-grid-detail grid" id="long-term" style="margin-top: 6rem;">
+      <div class="storage-image-side">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Classic Porsche in storage">
+        <div class="storage-badge-float">
+          <i class="fas fa-wind text-accent"></i>
+          <div>
+            <h5 style="font-size:0.85rem; margin-bottom:0.1rem;">Active Airflow</h5>
+            <p style="font-size:0.75rem; color:var(--text-secondary);">Constant 50% relative humidity</p>
+          </div>
+        </div>
+      </div>
+      <div class="storage-text-side">
+        <span class="badge badge-info" style="margin-bottom:1rem;"><span class="badge-dot"></span> Climate-Controlled</span>
+        <h2 style="font-size:2.25rem; margin-bottom:1rem;">Long-Term Seasonal Storage Vaults</h2>
+        <p style="color:var(--text-secondary); margin-bottom:1.5rem;">
+          Preserve your collector sports cars and luxury sedans through the winter or off-seasons. Our primary facilities maintain constant temperature zones, and humidity metrics are continually updated to prevent rust, condensation, and leather wear.
+        </p>
+        <ul style="list-style:none; margin-bottom:2rem; display:flex; flex-direction:column; gap:0.5rem; font-size:0.95rem; color:var(--text-secondary);">
+          <li><i class="fas fa-check text-accent" style="margin-right:0.5rem;"></i> Regulated 68°F (20°C) temperature monitoring</li>
+          <li><i class="fas fa-check text-accent" style="margin-right:0.5rem;"></i> Regular battery diagnostics and status logging</li>
+          <li><i class="fas fa-check text-accent" style="margin-right:0.5rem;"></i> Tire pressure adjustments and rotation cycles</li>
+        </ul>
+        <a href="#enquiry" class="btn btn-secondary">Request Long-Term Storage</a>
+      </div>
+    </div>
+
+    <!-- Premium Storage -->
+    <div class="storage-grid-detail grid" id="premium" style="margin-top: 6rem;">
+      <div class="storage-image-side">
+        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="Supercars in private vault">
+        <div class="storage-badge-float">
+          <i class="fas fa-crown text-accent"></i>
+          <div>
+            <h5 style="font-size:0.85rem; margin-bottom:0.1rem;">Elite Vaults</h5>
+            <p style="font-size:0.75rem; color:var(--text-secondary);">Biometric security partitions</p>
+          </div>
+        </div>
+      </div>
+      <div class="storage-text-side">
+        <span class="badge badge-accent" style="margin-bottom:1rem;"><span class="badge-dot"></span> Private Partitions</span>
+        <h2 style="font-size:2.25rem; margin-bottom:1rem;">Premium Vehicle Collection Vaults</h2>
+        <p style="color:var(--text-secondary); margin-bottom:1.5rem;">
+          Designed specifically for rare high-value supercars, exotic imports, and museum collections. Each vehicle is stored inside its own micro-filtered dust bubble with dedicated trickle charge feeds, protected by multi-factor biometric authentication gateways.
+        </p>
+        <ul style="list-style:none; margin-bottom:2rem; display:flex; flex-direction:column; gap:0.5rem; font-size:0.95rem; color:var(--text-secondary);">
+          <li><i class="fas fa-check text-accent" style="margin-right:0.5rem;"></i> Private partitioned secure vaults</li>
+          <li><i class="fas fa-check text-accent" style="margin-right:0.5rem;"></i> Monthly startup and full system heat cycle testing</li>
+          <li><i class="fas fa-check text-accent" style="margin-right:0.5rem;"></i> Underbody detailing and premium hand-wash before pickup</li>
+        </ul>
+        <a href="#enquiry" class="btn btn-primary">Reserve Elite Vault Space</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicle Protection Policies -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Continuous Vehicle Maintenance &amp; Care</h2>
+        <p class="section-subtitle">
+          We do not just park your car; we preserve it. Our trained automotive detailing crew provides ongoing technical supervision.
+        </p>
+      </div>
+
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 1rem;">
+        <div class="glass-card" style="padding:2rem;">
+          <i class="fas fa-plug-circle-bolt" style="font-size:2rem; color:var(--color-accent); margin-bottom:1rem;"></i>
+          <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Battery Care</h4>
+          <p style="color:var(--text-secondary); font-size:0.9rem;">
+            Automatic connection to smart CTEK multi-stage trickle chargers to ensure battery health is maintained perfectly.
+          </p>
+        </div>
+
+        <div class="glass-card" style="padding:2rem;">
+          <i class="fas fa-gauge-high" style="font-size:2rem; color:var(--color-accent); margin-bottom:1rem;"></i>
+          <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Flat Spot Prevention</h4>
+          <p style="color:var(--text-secondary); font-size:0.9rem;">
+            Vehicles are placed on soft tire cushions and moved periodically to eliminate flat spots during prolonged storage.
+          </p>
+        </div>
+
+        <div class="glass-card" style="padding:2rem;">
+          <i class="fas fa-soap" style="font-size:2rem; color:var(--color-accent); margin-bottom:1rem;"></i>
+          <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Detail Wash Room</h4>
+          <p style="color:var(--text-secondary); font-size:0.9rem;">
+            Optional full exterior de-ionization hand washes and interior conditioning before vehicle collection.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Storage Process Timeline -->
+  <section class="section-padding container">
+    <div class="text-center">
+      <h2 class="section-title">The Vehicle Intake Process</h2>
+      <p class="section-subtitle">
+        Review our transparent intake flow designed to document vehicle states and ensure complete peace of mind.
+      </p>
+    </div>
+
+    <div class="timeline-flow grid" style="margin-top: 2rem;">
+      <div class="timeline-step">
+        <div class="step-number">1</div>
+        <h4>Request Quote</h4>
+        <p>Complete our form below with vehicle parameters, dates, and preferred storage tiers.</p>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-number">2</div>
+        <h4>Condition Report</h4>
+        <p>Upon check-in, we perform a 360° high-def video scan and create a full paintwork report.</p>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-number">3</div>
+        <h4>Secure Placement</h4>
+        <p>We connect battery chargers, place tire cushions, cover the vehicle, and lock the bay.</p>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-number">4</div>
+        <h4>Easy Dashboard Check</h4>
+        <p>Monitor battery voltage, check security feeds, or request vehicle checkout via your dashboard.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Storage Space Reservation Enquiry Form -->
+  <section class="section-padding container" id="enquiry" style="border-top: 1px solid var(--border-color);">
+    <div class="enquiry-panel glass-card">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <h2 style="font-size:2rem; margin-bottom:0.5rem;"><i class="fas fa-file-signature text-accent"></i> Request Storage Reservation</h2>
+        <p style="color:var(--text-secondary); font-size:0.95rem;">
+          Provide details about your automobile and dates. Our intake officers will reply with a detailed reservation proposal in 2 hours.
+        </p>
+      </div>
+
+      <form action="contact.html" method="POST">
+        <div class="form-two-col">
+          <div class="form-group">
+            <label for="storage-name">Full Name</label>
+            <input type="text" id="storage-name" class="form-input" required placeholder="Johnathan Doe">
+          </div>
+          <div class="form-group">
+            <label for="storage-email">Email Address</label>
+            <input type="email" id="storage-email" class="form-input" required placeholder="john@company.com">
+          </div>
+        </div>
+
+        <div class="form-two-col">
+          <div class="form-group">
+            <label for="storage-vehicle-make">Vehicle Model (Year, Make &amp; Model)</label>
+            <input type="text" id="storage-vehicle-make" class="form-input" required placeholder="e.g. 2024 Porsche 911 GT3">
+          </div>
+          <div class="form-group">
+            <label for="storage-tier">Preferred Storage Tier</label>
+            <select id="storage-tier" class="form-input" required>
+              <option value="short">Short-Term Storage ($15/day)</option>
+              <option value="long">Long-Term Climate Controlled ($299/month)</option>
+              <option value="vault">Premium Storage Vault ($450/month)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-two-col">
+          <div class="form-group">
+            <label for="storage-date-start">Drop-off Date</label>
+            <input type="date" id="storage-date-start" class="form-input" required value="2026-08-20">
+          </div>
+          <div class="form-group">
+            <label for="storage-date-end">Estimated Pickup Date</label>
+            <input type="date" id="storage-date-end" class="form-input" required value="2026-11-20">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="storage-special">Special Care Instructions / Detailing requests</label>
+          <textarea id="storage-special" class="form-input" placeholder="e.g. Please perform exterior detailing prior to collection, trickle charge required..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:1rem;">
+          <i class="fas fa-paper-plane"></i> Submit Storage Enquiry
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+            <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Park<span>Shield</span>
+        </a>
+        <p class="footer-description">
+          ParkShield is a state-of-the-art parking and vehicle storage network, serving commercial complexes, international airports, and private vehicle collectors.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Vehicle Storage</h4>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="storage.html#short-term">Short-Term Storage</a></li>
+          <li class="footer-link"><a href="storage.html#long-term">Climate Controlled</a></li>
+          <li class="footer-link"><a href="storage.html#premium">Premium Collector Vault</a></li>
+          <li class="footer-link"><a href="storage.html#protection">Detailing &amp; Care</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Contact &amp; Support</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+          <p>100 Airside Plaza, Terminal 3 Blvd, Airport City, AC 94012</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone footer-contact-icon"></i>
+          <p>+1 (800) 555-PARK (7275)</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope footer-contact-icon"></i>
+          <p>support@parkshield.com</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock footer-contact-icon"></i>
+          <p>Open 24 Hours / 7 Days a Week</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 ParkShield Technologies Inc. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">SLA Agreement</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

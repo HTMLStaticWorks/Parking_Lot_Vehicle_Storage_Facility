@@ -1,1 +1,449 @@
-trest
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkShield | Premium Airport & Commercial Parking Solutions</title>
+  <meta name="description" content="ParkShield offers secure, modern multi-level parking and vehicle storage facility with digital access passes, EV charging, and 24/7 security.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+          <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Park<span>Shield</span>
+      </a>
+      
+      <nav class="nav-container">
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home 1</a></li>
+          <li class="nav-item"><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          
+          <li class="nav-item">
+            <a href="storage.html" class="nav-link">Vehicle Storage <i class="fas fa-chevron-down" style="font-size:0.75rem; margin-left:2px;"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="storage.html#short-term">Short-Term Storage</a></li>
+              <li class="dropdown-item"><a href="storage.html#long-term">Long-Term Storage</a></li>
+              <li class="dropdown-item"><a href="storage.html#premium">Premium Storage</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item"><a href="security.html" class="nav-link">Security</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link" style="border:1px solid var(--color-accent); color:var(--color-accent); padding:0.4rem 1rem;">Login</a></li>
+        </ul>
+      </nav>
+      
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Centered Layout -->
+  <section class="hero-h1">
+    <div class="container">
+      <div class="hero-text" style="max-width:800px; margin:0 auto; text-align:center; display:flex; flex-direction:column; align-items:center;">
+        <div class="badge badge-accent" style="margin-bottom:1.5rem;">
+          <span class="badge-dot"></span> Smart Mobility Platform
+        </div>
+        <h1 style="text-align:center;">Premium Parking &amp; <span>Secure Storage</span> for Modern Vehicles</h1>
+        <p style="max-width:none; margin-bottom:2.5rem;">
+          Experience next-generation multi-level airport parking structures and climate-controlled storage vaults. Integrated with automated license plate recognition, live slot tracking, and premium digital entry passes.
+        </p>
+        <div class="flex" style="gap:1rem; flex-wrap:wrap; justify-content:center;">
+          <a href="dashboard.html?tab=book" class="btn btn-primary">Find a Parking Slot</a>
+          <a href="storage.html" class="btn btn-secondary">Explore Storage Vaults</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Available Parking Categories -->
+  <section class="section-padding container">
+    <div class="text-center">
+      <h2 class="section-title">Designed For Every Journey</h2>
+      <p class="section-subtitle">
+        Whether you are boarding an international flight, parking for a business meeting, or storing a rare collector vehicle, we have custom-tailored spaces.
+      </p>
+    </div>
+    
+    <div class="categories-grid grid">
+      <!-- Category 1 -->
+      <div class="category-card glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; text-align: left; height: 100%;">
+        <img src="cat_airport.jpg" alt="Airport Terminal Parking" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+          <div>
+            <h3 style="margin-bottom: 0.75rem;">Airport Terminal Parking</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 0.95rem;">Premium multi-level spaces immediately adjacent to terminal doors with digital fast-track entry.</p>
+          </div>
+          <a href="dashboard.html?tab=book" class="btn btn-accent" style="padding: 0.5rem 1.25rem; font-size:0.85rem; align-self: flex-start; margin-top: auto;">View Spaces</a>
+        </div>
+      </div>
+      
+      <!-- Category 2 -->
+      <div class="category-card glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; text-align: left; height: 100%;">
+        <img src="cat_ev.jpg" alt="Smart EV Charging" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+          <div>
+            <h3 style="margin-bottom: 0.75rem;">Smart EV Charging</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 0.95rem;">High-powered Level 2 and Level 3 DC fast chargers with automatic reservation capability.</p>
+          </div>
+          <a href="dashboard.html?tab=book" class="btn btn-accent" style="padding: 0.5rem 1.25rem; font-size:0.85rem; align-self: flex-start; margin-top: auto;">View Spaces</a>
+        </div>
+      </div>
+      
+      <!-- Category 3 -->
+      <div class="category-card glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; text-align: left; height: 100%;">
+        <img src="cat_storage.jpg" alt="Vehicle Storage Vaults" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+          <div>
+            <h3 style="margin-bottom: 0.75rem;">Vehicle Storage Vaults</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 0.95rem;">Climate-controlled indoor storage units featuring strict access control, dust-free airflow, and trickle charger connections.</p>
+          </div>
+          <a href="storage.html" class="btn btn-accent" style="padding: 0.5rem 1.25rem; font-size:0.85rem; align-self: flex-start; margin-top: auto;">View Storage</a>
+        </div>
+      </div>
+      
+      <!-- Category 4 -->
+      <div class="category-card glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; text-align: left; height: 100%;">
+        <img src="cat_accessible.jpg" alt="Accessible Spaces" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+          <div>
+            <h3 style="margin-bottom: 0.75rem;">Accessible Spaces</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 0.95rem;">Dedicated parking layout closest to elevators, wheelchair accessibility ramps, and terminal escalators.</p>
+          </div>
+          <a href="dashboard.html?tab=book" class="btn btn-accent" style="padding: 0.5rem 1.25rem; font-size:0.85rem; align-self: flex-start; margin-top: auto;">View Spaces</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Parking Reservation Works -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Seamless Parking in 4 Simple Steps</h2>
+        <p class="section-subtitle">
+          Our advanced digital ecosystem eliminates the hassle of searching for open slots. Book in advance and drive right in.
+        </p>
+      </div>
+      
+      <div class="timeline-flow grid">
+        <div class="timeline-step">
+          <div class="step-number">1</div>
+          <h4>Search &amp; Select</h4>
+          <p>Enter your arrival details, select your preferred facility deck, and pick a custom slot type.</p>
+        </div>
+        
+        <div class="timeline-step">
+          <div class="step-number">2</div>
+          <h4>Confirm Reservation</h4>
+          <p>Book securely online. Select premium add-ons like EV charging or valet detailing service.</p>
+        </div>
+        
+        <div class="timeline-step">
+          <div class="step-number">3</div>
+          <h4>Get Digital Pass</h4>
+          <p>Receive your digital QR-style entry pass in your dashboard, phone wallet, or email receipt.</p>
+        </div>
+        
+        <div class="timeline-step">
+          <div class="step-number">4</div>
+          <h4>Seamless Entry</h4>
+          <p>Gates open automatically via license plate scan (ANPR) or QR reader scan at entry booths.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smart Parking Availability Dashboard section -->
+  <section class="section-padding container">
+    <div class="grid" style="grid-template-columns:1fr 1.2fr; gap:4rem; align-items:center;">
+      <div>
+        <div class="badge badge-warning" style="margin-bottom:1rem;">
+          <span class="badge-dot"></span> Live Slot Status
+        </div>
+        <h2 class="section-title left-align" style="font-size:2.25rem;">Automated Real-Time Facility Availability</h2>
+        <p style="color:var(--text-secondary); margin-bottom:1.5rem;">
+          We operate connected smart facilities across major travel and business hubs. Live slot availability data is fed back to city navigation grids, allowing drivers to view free spaces before they arrive.
+        </p>
+        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+          <div>
+            <div class="flex justify-between" style="font-size:0.9rem; font-weight:600; margin-bottom:0.35rem;">
+              <span>Airport Terminal 3 Plaza Garage</span>
+              <span>74% Occupied</span>
+            </div>
+            <div style="height:6px; background:var(--bg-tertiary); border-radius:3px; overflow:hidden;">
+              <div style="width:74%; height:100%; background:var(--color-accent); border-radius:3px;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between" style="font-size:0.9rem; font-weight:600; margin-bottom:0.35rem;">
+              <span>Downtown Corporate Central Deck</span>
+              <span>42% Occupied</span>
+            </div>
+            <div style="height:6px; background:var(--bg-tertiary); border-radius:3px; overflow:hidden;">
+              <div style="width:42%; height:100%; background:var(--color-accent); border-radius:3px;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between" style="font-size:0.9rem; font-weight:600; margin-bottom:0.35rem;">
+              <span>Secure Vehicle Storage Center</span>
+              <span>88% Occupied</span>
+            </div>
+            <div style="height:6px; background:var(--bg-tertiary); border-radius:3px; overflow:hidden;">
+              <div style="width:88%; height:100%; background:var(--color-amber); border-radius:3px;"></div>
+            </div>
+          </div>
+        </div>
+        <a href="dashboard.html?tab=book" class="btn btn-secondary" style="margin-top:2rem;">
+          <i class="fas fa-th"></i> Book Interactive Slot
+        </a>
+      </div>
+      
+      <div style="position:relative;">
+        <img src="parking_deck_entrance.jpg" alt="Modern parking building architecture" style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); width:100%;">
+        <div class="glass-card" style="position:absolute; bottom:-20px; left:20px; right:20px; padding:1.5rem; display:flex; align-items:center; gap:1rem;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(16,185,129,0.15); display:flex; align-items:center; justify-content:center; color:var(--color-success);">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div>
+            <h4 style="font-size:1rem; margin-bottom:0.15rem;">Automated Space Audits</h4>
+            <p style="font-size:0.8rem; color:var(--text-secondary);">Induction loop sensors and cameras track slot metrics every 5 seconds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security & Technology Highlights -->
+  <section class="section-padding" style="background-color:var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Pioneering Parking Infrastructure</h2>
+        <p class="section-subtitle">
+          We combine cutting-edge technology and concrete physical perimeter defense systems to create the most secure environment possible.
+        </p>
+      </div>
+      
+      <div class="grid" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
+        <div class="glass-card" style="padding:2.5rem 2.0rem; text-align:center; display:flex; flex-direction:column; align-items:center;">
+          <i class="fas fa-video" style="font-size:2rem; color:var(--color-accent); margin-bottom:1.25rem;"></i>
+          <h3 style="font-size:1.25rem; margin-bottom:0.75rem; text-align:center;">AI surveillance Cameras</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; text-align:center;">
+            Full CCTV surveillance integrated with threat behavior analysis sensors, license plate scanning, and perimeter alerts.
+          </p>
+        </div>
+        
+        <div class="glass-card" style="padding:2.5rem 2.0rem; text-align:center; display:flex; flex-direction:column; align-items:center;">
+          <i class="fas fa-id-card-alt" style="font-size:2rem; color:var(--color-accent); margin-bottom:1.25rem;"></i>
+          <h3 style="font-size:1.25rem; margin-bottom:0.75rem; text-align:center;">ANPR License Readers</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; text-align:center;">
+            Automatic Number Plate Recognition matches incoming vehicles to reservations instantly for zero-touch gate control.
+          </p>
+        </div>
+        
+        <div class="glass-card" style="padding:2.5rem 2.0rem; text-align:center; display:flex; flex-direction:column; align-items:center;">
+          <i class="fas fa-fingerprint" style="font-size:2rem; color:var(--color-accent); margin-bottom:1.25rem;"></i>
+          <h3 style="font-size:1.25rem; margin-bottom:0.75rem; text-align:center;">Biometric Storage Access</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; text-align:center;">
+            Vehicle Storage facility doors are defended by biometric sensors, electronic token verification, and continuous security patrols.
+          </p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:3rem;">
+        <a href="security.html" class="btn btn-primary">
+          <i class="fas fa-shield-halved"></i> Learn More About Our Security
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facility Statistics Banner -->
+  <section class="stats-banner">
+    <div class="container stats-grid grid">
+      <div class="stat-item">
+        <div class="stat-value">15+</div>
+        <div class="stat-label">Secure Facilities</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">12,400+</div>
+        <div class="stat-label">Active Slots</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">4.9/5</div>
+        <div class="stat-label">User Review Rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">2.4M+</div>
+        <div class="stat-label">Vehicles Handled</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="section-padding container">
+    <div class="text-center">
+      <h2 class="section-title">Trusted By Drivers Worldwide</h2>
+      <p class="section-subtitle">
+        Discover why thousands of daily commuters, corporate fleets, and luxury car collectors trust ParkShield.
+      </p>
+    </div>
+    
+    <div class="testimonials-grid grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card glass-card">
+        <div class="rating-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "ParkShield has transformed my weekly travel. I book parking near Terminal 3 ahead of time, the ANPR camera opens the gate automatically, and I'm inside the airport lounge in 5 minutes flat."
+        </p>
+        <div class="testimonial-user">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Sarah Jenkins" class="testimonial-avatar">
+          <div class="testimonial-user-info">
+            <h4>Sarah Jenkins</h4>
+            <span>Frequent Business Traveler</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card glass-card">
+        <div class="rating-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "I store my vintage Porsche in their premium climate-controlled storage vaults. The security is tighter than most banks, the staff monitors battery metrics, and I can request a detailed wash in the dashboard."
+        </p>
+        <div class="testimonial-user">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Marcus Sterling" class="testimonial-avatar">
+          <div class="testimonial-user-info">
+            <h4>Marcus Sterling</h4>
+            <span>Classic Car Collector</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card glass-card">
+        <div class="rating-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "The EV charging slots are excellent. I park downtown, charge my vehicle while working, and pay automatically via the dashboard pass. It works perfectly every time."
+        </p>
+        <div class="testimonial-user">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Elena Rostova" class="testimonial-avatar">
+          <div class="testimonial-user-info">
+            <h4>Elena Rostova</h4>
+            <span>Tech Startup CTO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strong Booking CTA -->
+  <section class="section-padding container">
+    <div class="cta-banner glass-card">
+      <h2>Reserve Your Space Before You Arrive</h2>
+      <p>
+        Guarantee your slot, secure competitive airport rates, and save valuable time. Join our community of registered drivers today.
+      </p>
+      <div class="flex" style="gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="dashboard.html" class="btn btn-primary">Book Parking Online</a>
+        <a href="signup.html" class="btn btn-secondary">Register New Account</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+            <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Park<span>Shield</span>
+        </a>
+        <p class="footer-description">
+          ParkShield is a state-of-the-art parking and vehicle storage network, serving commercial complexes, international airports, and private vehicle collectors.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Vehicle Storage</h4>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="storage.html#short-term">Short-Term Storage</a></li>
+          <li class="footer-link"><a href="storage.html#long-term">Climate Controlled</a></li>
+          <li class="footer-link"><a href="storage.html#premium">Premium Collector Vault</a></li>
+          <li class="footer-link"><a href="storage.html#protection">Detailing &amp; Care</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Contact &amp; Support</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+          <p>100 Airside Plaza, Terminal 3 Blvd, Airport City, AC 94012</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone footer-contact-icon"></i>
+          <p>+1 (800) 555-PARK (7275)</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope footer-contact-icon"></i>
+          <p>support@parkshield.com</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock footer-contact-icon"></i>
+          <p>Open 24 Hours / 7 Days a Week</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 ParkShield Technologies Inc. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">SLA Agreement</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

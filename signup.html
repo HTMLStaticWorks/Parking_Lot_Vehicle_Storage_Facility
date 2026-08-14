@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkShield | Create Account</title>
+  <meta name="description" content="Register an ParkShield account. Add your vehicle plates, reserve premium airport parking, and book climate controlled storage vaults.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="auth-page">
+
+  <div class="navbar-actions" style="position: absolute; top: 1.5rem; right: 2rem; z-index: 100;">
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+      <i class="fas fa-sun"></i>
+    </button>
+    <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+      <span>RTL</span>
+    </button>
+  </div>
+
+  <div class="glass-card auth-card" style="max-width:550px;">
+    <div class="auth-header">
+      <a href="index.html" class="logo" style="display:inline-flex;">
+        <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+          <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Park<span>Shield</span>
+      </a>
+      <h2 style="margin-top:1.5rem;">Join ParkShield</h2>
+      <p>Register now to track spaces and vehicle storage vaults</p>
+    </div>
+
+    <form action="dashboard.html" method="GET">
+      <div class="form-group">
+        <label for="signup-name">Full Name</label>
+        <input type="text" id="signup-name" class="form-input" required placeholder="Janeathan Doe">
+      </div>
+
+      <div class="form-group">
+        <label for="signup-email">Email Address</label>
+        <input type="email" id="signup-email" class="form-input" required placeholder="jane@company.com">
+      </div>
+      
+      <div class="form-group">
+        <label for="signup-phone">Phone Number</label>
+        <input type="tel" id="signup-phone" class="form-input" required placeholder="+1 (555) 012-3456">
+      </div>
+
+      <div class="form-group">
+        <label for="signup-pass">Password</label>
+        <div class="password-wrapper" style="position: relative;">
+          <input type="password" id="signup-pass" class="form-input" required placeholder="Min. 8 characters">
+          <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="signup-confirm">Confirm Password</label>
+        <div class="password-wrapper" style="position: relative;">
+          <input type="password" id="signup-confirm" class="form-input" required placeholder="Repeat password">
+          <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="auth-actions">
+        <label class="checkbox-label">
+          <input type="checkbox" id="terms-agree" required checked>
+          <span>I agree to the <a href="#" class="forgot-link">Terms &amp; Service Policy</a></span>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary auth-btn">
+        <i class="fas fa-user-plus"></i> Create Account
+      </button>
+    </form>
+
+    <div class="auth-divider">
+      <span>or continue with</span>
+    </div>
+    
+    <div class="social-login-grid">
+      <button type="button" class="social-btn">
+        <i class="fab fa-google"></i> Google
+      </button>
+      <button type="button" class="social-btn">
+        <i class="fab fa-apple"></i> Apple
+      </button>
+    </div>
+
+    <div class="auth-footer">
+      <p>Already have an account? <a href="login.html">Sign In</a></p>
+      <a href="index.html" style="display:inline-block; margin-top:1.5rem; font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-arrow-left"></i> Back to Homepage</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

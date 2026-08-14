@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkShield | Advanced Facility Security Infrastructure</title>
+  <meta name="description" content="Learn about ParkShield's bank-grade security protocols. 24/7 CCTV surveillance, automated license plate scanners (ANPR), security patrols, and digital access.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+          <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Park<span>Shield</span>
+      </a>
+      
+      <nav class="nav-container">
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home 1</a></li>
+          <li class="nav-item"><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          
+          <li class="nav-item">
+            <a href="storage.html" class="nav-link">Vehicle Storage <i class="fas fa-chevron-down" style="font-size:0.75rem; margin-left:2px;"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="storage.html#short-term">Short-Term Storage</a></li>
+              <li class="dropdown-item"><a href="storage.html#long-term">Long-Term Storage</a></li>
+              <li class="dropdown-item"><a href="storage.html#premium">Premium Storage</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item"><a href="security.html" class="nav-link">Security</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link" style="border:1px solid var(--color-accent); color:var(--color-accent); padding:0.4rem 1rem;">Login</a></li>
+        </ul>
+      </nav>
+      
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="hero-security">
+    <div class="container hero-h2-content">
+      <div class="badge badge-accent" style="margin-bottom: 1.5rem;">
+        <span class="badge-dot"></span> Secure Perimeter
+      </div>
+      <h1>Military-Grade Security Protocols</h1>
+      <p>
+        We manage complex security architectures integrating physical barriers, intelligent digital checks, and human surveillance grids.
+      </p>
+    </div>
+  </section>
+
+  <!-- Security Infrastructure Grid -->
+  <section class="container" style="margin-bottom: 5rem;">
+    <div class="security-highlights-grid grid">
+      <!-- Item 1 -->
+      <div class="glass-card security-card">
+        <div class="security-card-icon"><i class="fas fa-video"></i></div>
+        <h3>24/7 HD CCTV Surveillance</h3>
+        <p>Continuous video streams mapped through server logs. AI motion algorithms immediately flag unauthorized perimeter behavior to control desks.</p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="glass-card security-card">
+        <div class="security-card-icon"><i class="fas fa-id-card"></i></div>
+        <h3>ANPR Vehicle Scanners</h3>
+        <p>Automatic License Plate Recognition camera nodes cross-reference license plates with dashboard database tags, opening gates automatically.</p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="glass-card security-card">
+        <div class="security-card-icon"><i class="fas fa-users-viewfinder"></i></div>
+        <h3>Continuous Patrol Staff</h3>
+        <p>Experienced security officers execute random floor monitoring, vehicle counts, and fire safety check routines 24 hours a day.</p>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="glass-card security-card">
+        <div class="security-card-icon"><i class="fas fa-shield-halved"></i></div>
+        <h3>Fortified Concrete Walls</h3>
+        <p>Steel-reinforced perimeter concrete walls and anti-ram security bollards prevent physical vehicular breach attempts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Physical Security Center Image Focus Section -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;">
+        <div>
+          <div class="badge badge-warning" style="margin-bottom: 1rem;">
+            <span class="badge-dot"></span> Control Center
+          </div>
+          <h2 class="section-title left-align" style="font-size:2.25rem;">Command &amp; Control Operations</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Our facility command room functions as the centralized hub for security intelligence. Monitoring feeds cover all multi-level parking ramps, storage vaults, lift spaces, and entrance lanes in real time.
+          </p>
+          <div style="display:flex; flex-direction:column; gap:1.25rem; font-size:0.95rem; color:var(--text-secondary);">
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <i class="fas fa-check-circle text-accent"></i> <span>Automated threat notification system logs</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <i class="fas fa-check-circle text-accent"></i> <span>Direct lines to law enforcement dispatcher stations</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <i class="fas fa-check-circle text-accent"></i> <span>Secondary power generators ensuring 100% security uptime</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Security monitors screens" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width:100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security SLA Callout -->
+  <section class="section-padding container text-center">
+    <div class="cta-banner glass-card" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(10, 15, 29, 0.5) 100%); border-color: rgba(239, 68, 68, 0.2);">
+      <h2 style="color:var(--text-primary);"><i class="fas fa-circle-exclamation text-danger" style="margin-right:0.5rem;"></i> Zero-Liability Guarantee</h2>
+      <p style="color: var(--text-secondary);">
+        Due to our double-layer gate locks, guard schedules, and ANPR plate audits, we provide comprehensive parking safety guarantees. Rest assured, your assets are in the most secure hands in the industry.
+      </p>
+      <a href="contact.html" class="btn btn-secondary" style="margin-top: 1rem;">View Security Policy Details</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+            <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Park<span>Shield</span>
+        </a>
+        <p class="footer-description">
+          ParkShield is a state-of-the-art parking and vehicle storage network, serving commercial complexes, international airports, and private vehicle collectors.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Vehicle Storage</h4>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="storage.html#short-term">Short-Term Storage</a></li>
+          <li class="footer-link"><a href="storage.html#long-term">Climate Controlled</a></li>
+          <li class="footer-link"><a href="storage.html#premium">Premium Collector Vault</a></li>
+          <li class="footer-link"><a href="storage.html#protection">Detailing &amp; Care</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Contact &amp; Support</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+          <p>100 Airside Plaza, Terminal 3 Blvd, Airport City, AC 94012</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone footer-contact-icon"></i>
+          <p>+1 (800) 555-PARK (7275)</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope footer-contact-icon"></i>
+          <p>support@parkshield.com</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock footer-contact-icon"></i>
+          <p>Open 24 Hours / 7 Days a Week</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 ParkShield Technologies Inc. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">SLA Agreement</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

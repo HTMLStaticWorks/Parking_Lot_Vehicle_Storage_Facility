@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkShield | Customer Parking &amp; Storage Dashboard</title>
+  <meta name="description" content="Manage your active parking reservations, digital entry passes, registered vehicles, billing invoices, and secure climate storage details.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar" id="dashboard-sidebar">
+      <div class="sidebar-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L5 7v9c0 6.63 4.7 12.83 11 14 6.3-1.17 11-7.37 11-14V7L16 2z" fill="#0b132b" stroke="var(--color-accent)" stroke-width="2"/>
+            <path d="M12 9h5.5a3.5 3.5 0 010 7H12v7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 12.5h3.5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Park<span>Shield</span>
+        </a>
+      </div>
+      
+      <ul class="sidebar-menu">
+        <li class="sidebar-item active" data-tab="overview">
+          <button class="sidebar-item-btn"><i class="fas fa-chart-line"></i> Overview</button>
+        </li>
+        <li class="sidebar-item" data-tab="book">
+          <button class="sidebar-item-btn"><i class="fas fa-circle-plus"></i> Book Parking</button>
+        </li>
+        <li class="sidebar-item" data-tab="reservations">
+          <button class="sidebar-item-btn"><i class="fas fa-calendar-days"></i> My Reservations</button>
+        </li>
+        <li class="sidebar-item" data-tab="passes">
+          <button class="sidebar-item-btn"><i class="fas fa-qrcode"></i> Entry Passes</button>
+        </li>
+        <li class="sidebar-item" data-tab="vehicles">
+          <button class="sidebar-item-btn"><i class="fas fa-car-side"></i> My Vehicles</button>
+        </li>
+        <li class="sidebar-item" data-tab="storage">
+          <button class="sidebar-item-btn"><i class="fas fa-warehouse"></i> Vehicle Storage</button>
+        </li>
+        <li class="sidebar-item" data-tab="billing">
+          <button class="sidebar-item-btn"><i class="fas fa-credit-card"></i> Billing &amp; Payments</button>
+        </li>
+        <li class="sidebar-item" data-tab="notifications">
+          <button class="sidebar-item-btn"><i class="fas fa-bell"></i> Notifications</button>
+        </li>
+        <li class="sidebar-item" data-tab="settings">
+          <button class="sidebar-item-btn"><i class="fas fa-user-gear"></i> Profile &amp; Settings</button>
+        </li>
+        <li class="sidebar-item" data-tab="support">
+          <button class="sidebar-item-btn"><i class="fas fa-circle-question"></i> Support</button>
+        </li>
+      </ul>
+      
+      <div class="sidebar-footer">
+        <button class="sidebar-item-btn" id="logout-btn" style="color:var(--color-danger);"><i class="fas fa-arrow-right-from-bracket"></i> Logout</button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      
+      <!-- Top Header Bar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" aria-label="Toggle Sidebar">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h2 class="topbar-title" id="dashboard-title-text">Dashboard Overview</h2>
+        </div>
+        
+        <div class="topbar-right">
+          <!-- Live search tool -->
+          <div class="topbar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search reservations, bills..." id="dashboard-global-search">
+          </div>
+          
+          <!-- Notifications quick dropdown trigger -->
+          <div class="topbar-action-icon" id="quick-alert-btn" data-tab-trigger="notifications">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge"></span>
+          </div>
+
+          <!-- Light/Dark Mode quick trigger -->
+          <div class="topbar-action-icon" id="theme-toggle" style="border:none; width:auto; height:auto;">
+            <i class="fas fa-sun"></i>
+          </div>
+          
+          <!-- RTL translation toggle -->
+          <button class="rtl-toggle" id="rtl-toggle" style="border-radius:var(--radius-sm); padding:0.25rem 0.5rem; height:auto; width:auto;">
+            <span>RTL</span>
+          </button>
+
+          <!-- User Profile Brief info -->
+          <div class="user-profile-widget" id="user-profile-widget" data-tab-trigger="settings">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Marcus Sterling" class="user-avatar-sm">
+            <div class="user-info-sm">
+              <h5>Marcus Sterling</h5>
+              <span>Premium Member</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Scrollable Body -->
+      <div class="dashboard-content-body">
+        
+        <!-- ================= PANEL: OVERVIEW ================= -->
+        <section class="dashboard-panel active" id="panel-overview">
+          <!-- Upper stats widgets row -->
+          <div class="dashboard-widgets-grid grid">
+            <div class="glass-card widget-card">
+              <div class="widget-details">
+                <h4>Active Parking Pass</h4>
+                <div class="widget-number" id="widget-active-pass-id">A-203</div>
+                <span class="badge badge-success" style="margin-top:0.35rem;"><span class="badge-dot"></span> Checked In</span>
+              </div>
+              <div class="widget-icon-box"><i class="fas fa-circle-check"></i></div>
+            </div>
+            
+            <div class="glass-card widget-card">
+              <div class="widget-details">
+                <h4>Upcoming Parking</h4>
+                <div class="widget-number">Aug 16</div>
+                <span class="badge badge-info" style="margin-top:0.35rem;"><span class="badge-dot"></span> 1 Reservation</span>
+              </div>
+              <div class="widget-icon-box"><i class="fas fa-calendar-day"></i></div>
+            </div>
+
+            <div class="glass-card widget-card">
+              <div class="widget-details">
+                <h4>Vehicle Storage Vault</h4>
+                <div class="widget-number" id="widget-storage-vault-id">Vault B-14</div>
+                <span class="badge badge-accent" style="margin-top:0.35rem;"><span class="badge-dot"></span> Climate Safe</span>
+              </div>
+              <div class="widget-icon-box"><i class="fas fa-vault"></i></div>
+            </div>
+
+            <div class="glass-card widget-card">
+              <div class="widget-details">
+                <h4>Monthly Spending</h4>
+                <div class="widget-number">$384.50</div>
+                <span class="badge badge-success" style="margin-top:0.35rem;"><span class="badge-dot"></span> Invoices Paid</span>
+              </div>
+              <div class="widget-icon-box"><i class="fas fa-wallet"></i></div>
+            </div>
+          </div>
+
+          <!-- Split sections columns -->
+          <div class="dashboard-columns-split">
+            <!-- Left Side: Recent Activity -->
+            <div class="glass-card dashboard-table-card">
+              <div class="table-header">
+                <h3>Recent Activity &amp; Bookings</h3>
+                <button class="btn btn-secondary" style="padding:0.4rem 1rem; font-size:0.8rem;" id="overview-view-all-bookings-btn">View All</button>
+              </div>
+              <div class="dashboard-table-wrapper">
+                <table class="dashboard-table">
+                  <thead>
+                    <tr>
+                      <th>Activity ID</th>
+                      <th>Facility</th>
+                      <th>Slot</th>
+                      <th>Date</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="overview-activity-tbody">
+                    <!-- Loaded dynamically via JS -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Right Side: Active Pass & Storage status summary -->
+            <div style="display:flex; flex-direction:column; gap:1.5rem;">
+              <!-- Active Pass Brief Card -->
+              <div class="glass-card" style="padding:1.5rem;">
+                <h3 style="font-size:1.1rem; margin-bottom:1rem;"><i class="fas fa-qrcode text-accent"></i> Active Pass Scanner</h3>
+                <div style="background:var(--bg-tertiary); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1rem; text-align:center; margin-bottom:1rem;">
+                  <div style="background:white; width:130px; height:130px; margin:0 auto 1rem auto; padding:0.75rem; border-radius:6px; display:flex; align-items:center; justify-content:center;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=PARKSHIELD-A203-MARCUS" alt="Pass QR Code" style="width:100%;">
+                  </div>
+                  <h5 style="font-family:monospace; font-size:1rem; font-weight:700;">A-203 (EV Charging Spot)</h5>
+                  <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.25rem;">Airport Terminal 3 Plaza Deck</p>
+                </div>
+                <button class="btn btn-accent" style="width:100%; padding:0.5rem 1rem; font-size:0.85rem;" id="overview-go-passes-btn">Show Pass Details</button>
+              </div>
+
+              <!-- Storage Diagnostics Summary -->
+              <div class="glass-card" style="padding:1.5rem;">
+                <h3 style="font-size:1.1rem; margin-bottom:1rem;"><i class="fas fa-heart-pulse text-accent"></i> Storage Vault Status</h3>
+                <div style="display:flex; flex-direction:column; gap:0.75rem; font-size:0.85rem; color:var(--text-secondary);">
+                  <div class="flex justify-between">
+                    <span>Vehicle:</span>
+                    <strong class="text-primary">Porsche 911 GT3 (2024)</strong>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Battery Status:</span>
+                    <strong style="color:var(--color-success);"><i class="fas fa-plug"></i> Connected (13.4V)</strong>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Humidity Control:</span>
+                    <strong class="text-primary">48.2% RH (Optimal)</strong>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Intake Location:</span>
+                    <strong class="text-primary">Vault Room 02, Bay 14</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= PANEL: BOOK PARKING WIZARD ================= -->
+        <section class="dashboard-panel" id="panel-book">
+          <div class="glass-card" style="padding: 2.5rem 2rem;">
+            <!-- Wizard Step Nodes Header -->
+            <div class="booking-wizard-steps">
+              <div class="wizard-step-node active" id="step-node-1">
+                <div class="wizard-step-circle">1</div>
+                <span class="wizard-step-label">Facility</span>
+              </div>
+              <div class="wizard-step-node" id="step-node-2">
+                <div class="wizard-step-circle">2</div>
+                <span class="wizard-step-label">Time &amp; Vehicle</span>
+              </div>
+              <div class="wizard-step-node" id="step-node-3">
+                <div class="wizard-step-circle">3</div>
+                <span class="wizard-step-label">Choose Slot</span>
+              </div>
+              <div class="wizard-step-node" id="step-node-4">
+                <div class="wizard-step-circle">4</div>
+                <span class="wizard-step-label">Confirm</span>
+              </div>
+            </div>
+
+            <!-- Wizard Panels Box -->
+            <div class="wizard-panels">
+              
+              <!-- STEP 1: Select Facility -->
+              <div class="wizard-panel active" id="wizard-panel-1">
+                <h3 style="font-size:1.3rem; margin-bottom:1.5rem;">Select Parking Facility</h3>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                  <div class="glass-card facility-select-card active" data-facility="airport-t3" style="padding:1.5rem; cursor:pointer; border-color:var(--color-accent);">
+                    <h4 style="font-size:1.15rem; margin-bottom:0.5rem;"><i class="fas fa-plane-departure text-accent"></i> Airport Terminal 3 Plaza</h4>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">
+                      Covered multi-level structure directly connected to international departures.
+                    </p>
+                    <span class="badge badge-success"><span class="badge-dot"></span> Spaces Available</span>
+                  </div>
+                  
+                  <div class="glass-card facility-select-card" data-facility="downtown-plaza" style="padding:1.5rem; cursor:pointer;">
+                    <h4 style="font-size:1.15rem; margin-bottom:0.5rem;"><i class="fas fa-building text-accent"></i> Downtown Commercial Plaza</h4>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">
+                      Secure underground garage close to corporate towers and retail complexes.
+                    </p>
+                    <span class="badge badge-success"><span class="badge-dot"></span> Spaces Available</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 2: Time & Vehicle Parameters -->
+              <div class="wizard-panel" id="wizard-panel-2">
+                <h3 style="font-size:1.3rem; margin-bottom:1.5rem;">Arrival Time &amp; Vehicle Selection</h3>
+                <div class="form-two-col">
+                  <div class="form-group">
+                    <label for="wiz-date">Arrival Date</label>
+                    <input type="date" id="wiz-date" class="form-input" required value="2026-08-15">
+                  </div>
+                  <div class="form-group">
+                    <label for="wiz-time">Entry Time</label>
+                    <input type="time" id="wiz-time" class="form-input" required value="10:00">
+                  </div>
+                </div>
+                
+                <div class="form-two-col">
+                  <div class="form-group">
+                    <label for="wiz-duration">Parking Duration</label>
+                    <select id="wiz-duration" class="form-input" required>
+                      <option value="2">2 Hours ($9.00)</option>
+                      <option value="4">4 Hours ($18.00)</option>
+                      <option value="8">8 Hours ($36.00)</option>
+                      <option value="24" selected>1 Day ($28.00)</option>
+                      <option value="72">3 Days ($84.00)</option>
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="wiz-vehicle">Select Vehicle</label>
+                    <select id="wiz-vehicle" class="form-input" required>
+                      <!-- Loaded dynamically from user vehicles list -->
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 3: Choose Parking Slot -->
+              <div class="wizard-panel" id="wizard-panel-3">
+                <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">Select Specific Parking Slot</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">
+                  Click on an available slot in the deck plan below. Standard slots are default, EV and Premium slots carry a surcharge.
+                </p>
+                
+                <div class="deck-legend" style="margin-bottom:1.5rem; padding-bottom:1rem;">
+                  <div class="legend-item"><div class="legend-color available"></div><span>Available</span></div>
+                  <div class="legend-item"><div class="legend-color occupied"></div><span>Occupied</span></div>
+                  <div class="legend-item"><div class="legend-color premium" style="background:#8b5cf6;"></div><span>Premium</span></div>
+                  <div class="legend-item"><div class="legend-color ev"></div><span>EV Charging</span></div>
+                </div>
+                
+                <div class="slots-grid" id="wizard-slots-grid">
+                  <!-- Rendered dynamically by JS -->
+                </div>
+              </div>
+
+              <!-- STEP 4: Confirm Booking -->
+              <div class="wizard-panel" id="wizard-panel-4">
+                <h3 style="font-size:1.3rem; margin-bottom:1.5rem;">Confirm Your Booking Reservation</h3>
+                <div class="glass-card" style="padding:1.5rem; max-width:600px; margin:0 auto;">
+                  <div style="display:flex; flex-direction:column; gap:1rem; font-size:0.95rem; color:var(--text-secondary); margin-bottom:1.5rem;">
+                    <div class="flex justify-between"><span>Selected Facility:</span> <strong class="text-primary" id="conf-facility">Airport Terminal 3 Plaza</strong></div>
+                    <div class="flex justify-between"><span>Arrival Date:</span> <strong class="text-primary" id="conf-date">2026-08-15</strong></div>
+                    <div class="flex justify-between"><span>Entry Time:</span> <strong class="text-primary" id="conf-time">10:00</strong></div>
+                    <div class="flex justify-between"><span>Parking Duration:</span> <strong class="text-primary" id="conf-duration">1 Day</strong></div>
+                    <div class="flex justify-between"><span>Associated Vehicle:</span> <strong class="text-primary" id="conf-vehicle">Porsche 911 (S-911-GT3)</strong></div>
+                    <div class="flex justify-between"><span>Assigned Parking Slot:</span> <strong class="text-primary" id="conf-slot">A-203 (EV charging)</strong></div>
+                    <hr style="border-color:var(--border-color);">
+                    <div class="flex justify-between" style="font-size:1.15rem;"><span>Total Bill Cost:</span> <strong class="text-accent" id="conf-cost">$28.00</strong></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Wizard Footer Action triggers -->
+            <div class="wizard-footer-actions">
+              <button class="btn btn-secondary" id="wizard-prev-btn" style="opacity:0; pointer-events:none;"><i class="fas fa-arrow-left"></i> Previous</button>
+              <button class="btn btn-primary" id="wizard-next-btn">Next <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= PANEL: MY RESERVATIONS ================= -->
+        <section class="dashboard-panel" id="panel-reservations">
+          <div class="glass-card dashboard-table-card">
+            <div class="table-header">
+              <h3>Active &amp; Historical Bookings</h3>
+              <button class="btn btn-primary" style="padding:0.5rem 1.25rem; font-size:0.85rem;" id="res-make-booking-btn"><i class="fas fa-circle-plus"></i> New Reservation</button>
+            </div>
+            
+            <div class="dashboard-table-wrapper">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Booking ID</th>
+                    <th>Facility</th>
+                    <th>Slot</th>
+                    <th>Vehicle</th>
+                    <th>Date</th>
+                    <th>Duration</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="reservations-table-tbody">
+                  <!-- Dynamic render -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= PANEL: ENTRY PASSES ================= -->
+        <section class="dashboard-panel" id="panel-passes">
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;" id="passes-container-grid">
+            <!-- QR Pass Cards will load dynamically via JS -->
+          </div>
+        </section>
+
+        <!-- ================= PANEL: MY VEHICLES ================= -->
+        <section class="dashboard-panel" id="panel-vehicles">
+          <div class="vehicles-grid grid" id="vehicles-container-grid">
+            <!-- Dynamic Vehicles list + Add New card -->
+          </div>
+        </section>
+
+        <!-- ================= PANEL: VEHICLE STORAGE ================= -->
+        <section class="dashboard-panel" id="panel-storage">
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;" id="storage-container-grid">
+            <!-- Storage details loaded dynamically -->
+          </div>
+        </section>
+
+        <!-- ================= PANEL: BILLING & PAYMENTS ================= -->
+        <section class="dashboard-panel" id="panel-billing">
+          <!-- Billing brief summaries -->
+          <div class="dashboard-widgets-grid grid" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom: 2rem;">
+            <div class="glass-card widget-card">
+              <div class="widget-details">
+                <h4>Total Spending</h4>
+                <div class="widget-number">$942.50</div>
+              </div>
+              <div class="widget-icon-box"><i class="fas fa-money-bill-wave"></i></div>
+            </div>
+            
+            <div class="glass-card widget-card">
+              <div class="widget-details">
+                <h4>Outstanding Balance</h4>
+                <div class="widget-number" style="color:var(--color-amber);">$0.00</div>
+              </div>
+              <div class="widget-icon-box"><i class="fas fa-circle-exclamation"></i></div>
+            </div>
+
+            <div class="glass-card widget-card">
+              <div class="widget-details">
+                <h4>Saved Payment Cards</h4>
+                <div class="widget-number">1 Visa</div>
+              </div>
+              <div class="widget-icon-box"><i class="fas fa-wallet"></i></div>
+            </div>
+          </div>
+
+          <!-- Spending graph & Invoices block -->
+          <div class="dashboard-columns-split" style="margin-bottom: 2rem;">
+            <!-- Spending Chart -->
+            <div class="glass-card" style="padding: 1.5rem;">
+              <h3>Monthly Spending Statistics (2026)</h3>
+              <div class="spending-chart-box" id="billing-spending-chart">
+                <!-- Native SVG or bar wrappers rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Saved cards summary -->
+            <div class="glass-card" style="padding: 1.5rem;">
+              <h3>Primary Payment Method</h3>
+              <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem; color: white; margin-top: 1.5rem; position: relative;">
+                <div class="flex justify-between" style="margin-bottom:2rem;">
+                  <span style="font-size:1.1rem; font-weight:700; letter-spacing:0.05em;">VISA</span>
+                  <i class="fab fa-cc-visa" style="font-size:2rem; color:rgba(255,255,255,0.85);"></i>
+                </div>
+                <div style="font-family:monospace; font-size:1.2rem; letter-spacing:0.1em; margin-bottom:1rem;">••••  ••••  ••••  4820</div>
+                <div class="flex justify-between" style="font-size:0.8rem; color:var(--text-secondary);">
+                  <div>
+                    <span>CARD HOLDER</span>
+                    <p style="color:white; font-weight:600; margin-top:0.15rem;">Marcus Sterling</p>
+                  </div>
+                  <div>
+                    <span>EXPIRES</span>
+                    <p style="color:white; font-weight:600; margin-top:0.15rem;">12/28</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transaction Invoices List -->
+          <div class="glass-card dashboard-table-card">
+            <h3>Invoice &amp; Transaction History</h3>
+            <div class="dashboard-table-wrapper" style="margin-top:1.5rem;">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Invoice No</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Payment Method</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="invoices-table-tbody">
+                  <!-- Loaded dynamically by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= PANEL: NOTIFICATIONS ================= -->
+        <section class="dashboard-panel" id="panel-notifications">
+          <div class="glass-card" style="padding: 2rem;">
+            <div class="table-header">
+              <h3>System Alerts &amp; Facility Notifications</h3>
+              <button class="btn btn-secondary" style="padding:0.4rem 1rem; font-size:0.8rem;" id="alert-clear-all-btn">Mark All Read</button>
+            </div>
+            
+            <div class="notifications-list" id="notifications-container-list">
+              <!-- Loaded dynamically via JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= PANEL: PROFILE & SETTINGS ================= -->
+        <section class="dashboard-panel" id="panel-settings">
+          <div class="grid" style="grid-template-columns: 1.3fr 0.7fr; gap: 2rem;">
+            <!-- Profile Info Form -->
+            <div class="glass-card" style="padding: 2rem;">
+              <h3 style="font-size:1.3rem; margin-bottom:1.5rem;"><i class="fas fa-user-circle text-accent"></i> Personal Information</h3>
+              
+              <form action="#" id="profile-edit-form">
+                <div class="form-two-col">
+                  <div class="form-group">
+                    <label for="prof-name">Full Name</label>
+                    <input type="text" id="prof-name" class="form-input" required value="Marcus Sterling">
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-email">Email Address</label>
+                    <input type="email" id="prof-email" class="form-input" required value="collector@parkshield.com">
+                  </div>
+                </div>
+
+                <div class="form-two-col">
+                  <div class="form-group">
+                    <label for="prof-phone">Phone Number</label>
+                    <input type="tel" id="prof-phone" class="form-input" required value="+1 (555) 019-2834">
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-tier">Account Tier</label>
+                    <input type="text" id="prof-tier" class="form-input" disabled value="Premium VIP (Collector)">
+                  </div>
+                </div>
+
+                <hr style="border-color:var(--border-color); margin: 1.5rem 0;">
+                <h3 style="font-size:1.2rem; margin-bottom:1.25rem;"><i class="fas fa-lock text-accent"></i> Change Password</h3>
+
+                <div class="form-two-col">
+                  <div class="form-group">
+                    <label for="prof-pass-new">New Password</label>
+                    <input type="password" id="prof-pass-new" class="form-input" placeholder="Enter new password">
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-pass-conf">Confirm New Password</label>
+                    <input type="password" id="prof-pass-conf" class="form-input" placeholder="Confirm password">
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top:1rem;">Save Profile Settings</button>
+              </form>
+            </div>
+
+            <!-- Profile Preferences Widget sidebar -->
+            <div style="display:flex; flex-direction:column; gap:1.5rem;">
+              <div class="glass-card" style="padding: 1.5rem;">
+                <h3 style="font-size:1.1rem; margin-bottom:1.25rem;"><i class="fas fa-gear text-accent"></i> System Preferences</h3>
+                
+                <div class="form-group">
+                  <label for="pref-language">System Language</label>
+                  <select id="pref-language" class="form-input" style="padding:0.6rem 1rem;">
+                    <option value="en">English (US)</option>
+                    <option value="es">Español</option>
+                    <option value="ar">العربية (RTL)</option>
+                  </select>
+                </div>
+
+                <div style="display:flex; flex-direction:column; gap:1rem; margin-top:1.5rem;">
+                  <label class="checkbox-label" style="font-size:0.85rem;">
+                    <input type="checkbox" id="pref-email-alert" checked>
+                    <span>Receive email billing invoices</span>
+                  </label>
+                  <label class="checkbox-label" style="font-size:0.85rem;">
+                    <input type="checkbox" id="pref-sms-alert" checked>
+                    <span>Receive SMS entry pass alerts</span>
+                  </label>
+                  <label class="checkbox-label" style="font-size:0.85rem;">
+                    <input type="checkbox" id="pref-promo-alert">
+                    <span>Receive discount airport codes</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= PANEL: HELP & SUPPORT ================= -->
+        <section class="dashboard-panel" id="panel-support">
+          <div class="grid" style="grid-template-columns: 1.2fr 0.8fr; gap: 2rem;">
+            <!-- FAQ Accordions -->
+            <div class="glass-card" style="padding: 2rem;">
+              <h3 style="font-size:1.3rem; margin-bottom:1.5rem;"><i class="fas fa-circle-question text-accent"></i> Frequently Asked Questions</h3>
+              
+              <div style="display:flex; flex-direction:column; gap:1rem;" id="support-faq-accordion">
+                <div class="glass-card" style="padding:1rem; border-color:var(--border-color); cursor:pointer;">
+                  <h4 style="font-size:0.95rem; display:flex; justify-content:between; align-items:center;">
+                    <span>How does license plate gate scan access function?</span>
+                    <i class="fas fa-chevron-down" style="font-size:0.8rem;"></i>
+                  </h4>
+                  <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.5rem; display:none;">
+                    Our ANPR cameras detect your license plate 10 meters before the gate entry barrier. If matched to a current booking, the terminal displays a welcome message and opens the boom automatically.
+                  </p>
+                </div>
+
+                <div class="glass-card" style="padding:1rem; border-color:var(--border-color); cursor:pointer;">
+                  <h4 style="font-size:0.95rem; display:flex; justify-content:between; align-items:center;">
+                    <span>What happens if my flight is delayed and I overstay?</span>
+                    <i class="fas fa-chevron-down" style="font-size:0.8rem;"></i>
+                  </h4>
+                  <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.5rem; display:none;">
+                    No penalty fines are charged. Our platform matches flight number updates in real time. If overstay occurs, the exit reader automatically computes the extra duration at standard rates billed to your card.
+                  </p>
+                </div>
+
+                <div class="glass-card" style="padding:1rem; border-color:var(--border-color); cursor:pointer;">
+                  <h4 style="font-size:0.95rem; display:flex; justify-content:between; align-items:center;">
+                    <span>How do I retrieve my stored car from the vault?</span>
+                    <i class="fas fa-chevron-down" style="font-size:0.8rem;"></i>
+                  </h4>
+                  <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.5rem; display:none;">
+                    Simply click "Request Checkout" inside your storage panel at least 12 hours prior to collection. Our detailing staff will wake the vehicle, adjust cold tire pressures, perform detail wash, and align it at the collection zone.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Message Ticket submission form -->
+            <div class="glass-card" style="padding: 2rem;">
+              <h3 style="font-size:1.2rem; margin-bottom:1.5rem;"><i class="fas fa-ticket text-accent"></i> Open Help Ticket</h3>
+              <form action="#" id="support-ticket-form">
+                <div class="form-group">
+                  <label for="ticket-subject">Support Category</label>
+                  <select id="ticket-category" class="form-input" required>
+                    <option value="access">Access Gate Terminal Error</option>
+                    <option value="billing">Incorrect Billing Invoice</option>
+                    <option value="storage">Storage Detail request</option>
+                    <option value="other">General Question</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="ticket-msg">Write Details</label>
+                  <textarea id="ticket-msg" class="form-input" style="height:120px;" required placeholder="Describe your question or issue in detail..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%;">Create Ticket</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Dynamic Add Vehicle Modal -->
+  <div class="modal-overlay" id="add-vehicle-modal">
+    <div class="glass-card modal-content">
+      <button class="modal-close-btn" id="modal-close-btn-x"><i class="fas fa-times"></i></button>
+      <h3 style="font-size:1.4rem; margin-bottom:1.5rem;"><i class="fas fa-car text-accent"></i> Add New Vehicle</h3>
+      
+      <form id="add-vehicle-form">
+        <div class="form-group">
+          <label for="veh-plate">License Plate Number</label>
+          <input type="text" id="veh-plate" class="form-input" required placeholder="e.g. S-911-GT3" style="text-transform:uppercase;">
+        </div>
+
+        <div class="form-two-col">
+          <div class="form-group">
+            <label for="veh-make">Make / Manufacturer</label>
+            <input type="text" id="veh-make" class="form-input" required placeholder="e.g. Porsche">
+          </div>
+          <div class="form-group">
+            <label for="veh-model">Model</label>
+            <input type="text" id="veh-model" class="form-input" required placeholder="e.g. 911 GT3 RS">
+          </div>
+        </div>
+
+        <div class="form-two-col">
+          <div class="form-group">
+            <label for="veh-type">Vehicle Type</label>
+            <select id="veh-type" class="form-input">
+              <option value="Sports">Premium Sports / Coupe</option>
+              <option value="Sedan">Standard Sedan</option>
+              <option value="SUV">SUV / Utility Truck</option>
+              <option value="EV">Electric Vehicle (EV)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="veh-color">Color</label>
+            <input type="text" id="veh-color" class="form-input" required placeholder="e.g. Shark Blue">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:1.5rem;">Save Vehicle</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
