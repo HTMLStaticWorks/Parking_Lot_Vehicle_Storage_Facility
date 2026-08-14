@@ -216,8 +216,8 @@ button {
 .badge-info { background: rgba(59, 130, 246, 0.15); color: var(--color-info); }
 .badge-info .badge-dot { background: var(--color-info); }
 
-.badge-accent { background: rgba(0, 245, 212, 0.15); color: var(--color-accent); }
-.badge-accent .badge-dot { background: var(--color-accent); }
+.badge-accent { background: rgba(0, 245, 212, 0.35); color: var(--color-accent); border: 1px solid rgba(0, 245, 212, 0.4); box-shadow: 0 0 12px rgba(0, 245, 212, 0.2); }
+.badge-accent .badge-dot { background: var(--color-accent); box-shadow: 0 0 8px var(--color-accent); }
 
 /* Buttons */
 .btn {
