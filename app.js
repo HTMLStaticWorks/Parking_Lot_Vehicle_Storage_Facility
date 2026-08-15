@@ -142,7 +142,7 @@ function initMobileMenu() {
     
     if (link && dropdown) {
       link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1150) {
           const isDropdownVisible = dropdown.style.maxHeight && dropdown.style.maxHeight !== '0px';
           
           // Collapse all dropdowns first

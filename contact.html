@@ -186,6 +186,83 @@
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
+
+    <!-- FAQ Section -->
+    <div style="margin-top: 5rem; border-top: 1px solid var(--border-color); padding-top: 5rem;">
+      <div class="text-center">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Find quick answers to common queries regarding reservations, access passes, billing, and security.
+        </p>
+      </div>
+
+      <div class="faq-accordion" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item glass-card" style="padding: 1.5rem; cursor: pointer; transition: all var(--transition-normal);">
+          <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">
+            <span>How do I access the parking lot after booking?</span>
+            <i class="fas fa-plus" style="font-size: 0.9rem; color: var(--color-accent); transition: transform var(--transition-normal);"></i>
+          </div>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: all var(--transition-normal); padding-top: 0;">
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 1rem; line-height: 1.6;">
+              Once you reserve a space, you will receive a digital QR pass in your email and client dashboard. Our gates are also equipped with ANPR license readers that will match your license plate and open automatically upon arrival.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item glass-card" style="padding: 1.5rem; cursor: pointer; transition: all var(--transition-normal);">
+          <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">
+            <span>Can I extend my parking reservation while away?</span>
+            <i class="fas fa-plus" style="font-size: 0.9rem; color: var(--color-accent); transition: transform var(--transition-normal);"></i>
+          </div>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: all var(--transition-normal); padding-top: 0;">
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 1rem; line-height: 1.6;">
+              Yes, you can extend your stay at any time directly through your dashboard. Simply locate your active pass and select the duration extension option.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item glass-card" style="padding: 1.5rem; cursor: pointer; transition: all var(--transition-normal);">
+          <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">
+            <span>What is included in the Climate-Controlled Storage Vault service?</span>
+            <i class="fas fa-plus" style="font-size: 0.9rem; color: var(--color-accent); transition: transform var(--transition-normal);"></i>
+          </div>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: all var(--transition-normal); padding-top: 0;">
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 1rem; line-height: 1.6;">
+              Premium vaults feature continuous climate-controlled airflow, bi-weekly tire checks, automatic connection to smart trickle battery chargers, and premium dust covers.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item glass-card" style="padding: 1.5rem; cursor: pointer; transition: all var(--transition-normal);">
+          <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">
+            <span>Is there electric vehicle (EV) charging available?</span>
+            <i class="fas fa-plus" style="font-size: 0.9rem; color: var(--color-accent); transition: transform var(--transition-normal);"></i>
+          </div>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: all var(--transition-normal); padding-top: 0;">
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 1rem; line-height: 1.6;">
+              Yes, we have dedicated EV charging bays equipped with Level 2 and Level 3 DC fast chargers. You can add charger reservation options when booking your parking space.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item glass-card" style="padding: 1.5rem; cursor: pointer; transition: all var(--transition-normal);">
+          <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">
+            <span>What is your cancellation and refund policy?</span>
+            <i class="fas fa-plus" style="font-size: 0.9rem; color: var(--color-accent); transition: transform var(--transition-normal);"></i>
+          </div>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: all var(--transition-normal); padding-top: 0;">
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 1rem; line-height: 1.6;">
+              You can cancel any reservation up to 24 hours before your scheduled arrival time for a full refund. Cancellations made within 24 hours of arrival are subject to a nominal fee.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -267,6 +344,31 @@
         }, 5000);
       });
     }
+
+    // FAQ Accordion Handler
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-question i');
+        const isOpen = item.classList.contains('active');
+        
+        // Close all other items first
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
+          otherItem.querySelector('.faq-answer').style.maxHeight = '0px';
+          otherItem.querySelector('.faq-question i').className = 'fas fa-plus';
+          otherItem.querySelector('.faq-question i').style.transform = 'rotate(0deg)';
+        });
+        
+        if (!isOpen) {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.className = 'fas fa-minus';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
   </script>
 </body>
 </html>
