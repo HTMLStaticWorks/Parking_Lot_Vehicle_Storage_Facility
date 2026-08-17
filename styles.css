@@ -2856,6 +2856,20 @@ textarea.form-input {
   .dashboard-widgets-grid {
     grid-template-columns: minmax(0, 1fr) !important;
   }
+
+  /* Collapse card buttons/actions row to vertical stacking and prevent overflow */
+  .dashboard-panel .flex[style*="gap"] {
+    flex-direction: column !important;
+  }
+  .dashboard-panel .flex[style*="gap"] button,
+  .dashboard-panel .flex[style*="gap"] a {
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .dashboard-panel .glass-card {
+    padding: 1.25rem !important;
+  }
 }
 
 /* Social Login Styles */
