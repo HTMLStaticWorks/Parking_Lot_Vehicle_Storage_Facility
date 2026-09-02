@@ -15,24 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
  * Initialize Light/Dark Theme Toggle
  */
 function initTheme() {
-  const themeToggle = document.getElementById('theme-toggle');
-  if (!themeToggle) return;
+  const themeToggles = document.querySelectorAll('.theme-toggle, #theme-toggle');
+  if (themeToggles.length === 0) return;
 
   // Check saved theme or system preference
   const savedTheme = localStorage.getItem('theme') || 'dark'; // Dark is premium default
   document.documentElement.setAttribute('data-theme', savedTheme);
-  updateThemeIcon(themeToggle, savedTheme);
+  themeToggles.forEach(btn => updateThemeIcon(btn, savedTheme));
 
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(themeToggle, newTheme);
-    
-    // Dispatch custom event for dashboard graphs if needed
-    window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: newTheme } }));
+  themeToggles.forEach(themeToggle => {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeToggles.forEach(btn => updateThemeIcon(btn, newTheme));
+      
+      // Dispatch custom event for dashboard graphs if needed
+      window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: newTheme } }));
+    });
   });
 }
 
@@ -52,21 +54,23 @@ function updateThemeIcon(btn, theme) {
  * Initialize RTL Toggle
  */
 function initRtl() {
-  const rtlToggle = document.getElementById('rtl-toggle');
-  if (!rtlToggle) return;
+  const rtlToggles = document.querySelectorAll('.rtl-toggle, #rtl-toggle');
+  if (rtlToggles.length === 0) return;
 
   // Check saved direction
   const savedDir = localStorage.getItem('dir') || 'ltr';
   document.documentElement.setAttribute('dir', savedDir);
-  updateRtlButtonText(rtlToggle, savedDir);
+  rtlToggles.forEach(btn => updateRtlButtonText(btn, savedDir));
 
-  rtlToggle.addEventListener('click', () => {
-    const currentDir = document.documentElement.getAttribute('dir');
-    const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
-    
-    document.documentElement.setAttribute('dir', newDir);
-    localStorage.setItem('dir', newDir);
-    updateRtlButtonText(rtlToggle, newDir);
+  rtlToggles.forEach(rtlToggle => {
+    rtlToggle.addEventListener('click', () => {
+      const currentDir = document.documentElement.getAttribute('dir');
+      const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+      
+      document.documentElement.setAttribute('dir', newDir);
+      localStorage.setItem('dir', newDir);
+      rtlToggles.forEach(btn => updateRtlButtonText(btn, newDir));
+    });
   });
 }
 

@@ -580,15 +580,15 @@ function initStoragePanel() {
     card.style.margin = '0 auto';
     
     card.innerHTML = `
-      <div class="flex justify-between align-center" style="margin-bottom:1.5rem;">
+      <div class="flex justify-between align-center" style="margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
         <h3 style="font-size:1.3rem;"><i class="fas fa-vault text-accent"></i> Climate Vault Storage Registry</h3>
-        <span class="badge badge-accent"><span class="badge-dot"></span> Active Intake</span>
+        <span class="badge badge-accent" style="white-space:nowrap;"><span class="badge-dot"></span> Active Intake</span>
       </div>
 
-      <div class="grid" style="grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:2rem;">
+      <div class="grid" style="grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:2rem; margin-bottom:2rem;">
         <div>
           <h4 style="font-size:1rem; margin-bottom:0.75rem; color:var(--text-secondary);">Storage Allocation Parameters</h4>
-          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem; color:var(--text-secondary);">
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem; color:var(--text-secondary); word-break:break-word;">
             <li>Intake Location: <strong class="text-primary">${storageItem.vault}</strong></li>
             <li>Vehicle Reg: <strong class="text-primary">${storageItem.vehicle}</strong></li>
             <li>Vault Category: <strong class="text-primary">${storageItem.type}</strong></li>
@@ -599,7 +599,7 @@ function initStoragePanel() {
         
         <div>
           <h4 style="font-size:1rem; margin-bottom:0.75rem; color:var(--text-secondary);">Live Diagnostics Telemetry</h4>
-          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem; color:var(--text-secondary);">
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem; color:var(--text-secondary); word-break:break-word;">
             <li>Battery Voltage: <strong style="color:var(--color-success);"><i class="fas fa-battery-three-quarters"></i> ${storageItem.battery}</strong></li>
             <li>Environmental Humidity: <strong class="text-primary">${storageItem.humidity}</strong></li>
             <li>Automatic Billing: <strong class="text-primary">$${storageItem.cost.toFixed(2)} / month</strong></li>
@@ -608,9 +608,9 @@ function initStoragePanel() {
         </div>
       </div>
 
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:1rem; width:100%;">
-        <button class="btn btn-primary" id="extend-storage-btn" style="width:100%;">Extend Storage Plan</button>
-        <button class="btn btn-secondary" id="checkout-storage-btn" style="width:100%; border-color:var(--color-amber); color:var(--color-amber);">Request Vehicle Checkout</button>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; width:100%;">
+        <button class="btn btn-primary" id="extend-storage-btn" style="width:100%; white-space:normal; height:auto; padding:0.85rem 1rem;">Extend Storage Plan</button>
+        <button class="btn btn-secondary" id="checkout-storage-btn" style="width:100%; border-color:var(--color-amber); color:var(--color-amber); white-space:normal; height:auto; padding:0.85rem 1rem;">Request Vehicle Checkout</button>
       </div>
     `;
 
