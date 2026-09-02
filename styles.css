@@ -263,7 +263,7 @@ button {
 .btn-secondary {
   background: transparent;
   color: var(--text-primary);
-  border-color: var(--border-color);
+  border-color: var(--text-primary);
 }
 
 .btn-secondary:hover {
@@ -675,6 +675,11 @@ button {
   font-weight: 500;
 }
 
+.widget-input-wrapper select option {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
 .widget-input-wrapper:focus-within {
   border-color: var(--color-accent);
   box-shadow: 0 0 10px rgba(0, 245, 212, 0.1);
@@ -734,7 +739,7 @@ button {
 .timeline-flow::after {
   content: '';
   position: absolute;
-  top: 50px;
+  top: 30px;
   left: 10%;
   right: 10%;
   height: 2px;
@@ -2967,7 +2972,7 @@ textarea.form-input {
 [data-theme="light"] .hero-about .badge-accent,
 [data-theme="light"] .hero-security .badge-accent,
 [data-theme="light"] .hero-contact .badge-accent {
-  color: #ffffff;
+  color: var(--color-accent);
   border-color: rgba(0, 245, 212, 0.4);
   background: rgba(0, 245, 212, 0.15);
 }

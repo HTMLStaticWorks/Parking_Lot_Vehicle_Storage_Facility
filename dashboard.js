@@ -608,9 +608,9 @@ function initStoragePanel() {
         </div>
       </div>
 
-      <div class="flex" style="gap:1rem;">
-        <button class="btn btn-primary" id="extend-storage-btn" style="flex:1;">Extend Storage Plan</button>
-        <button class="btn btn-secondary" id="checkout-storage-btn" style="flex:1; border-color:var(--color-amber); color:var(--color-amber);">Request Vehicle Checkout</button>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:1rem; width:100%;">
+        <button class="btn btn-primary" id="extend-storage-btn" style="width:100%;">Extend Storage Plan</button>
+        <button class="btn btn-secondary" id="checkout-storage-btn" style="width:100%; border-color:var(--color-amber); color:var(--color-amber);">Request Vehicle Checkout</button>
       </div>
     `;
 
