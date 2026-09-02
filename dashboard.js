@@ -575,7 +575,7 @@ function initStoragePanel() {
     const card = document.createElement('div');
     card.className = 'glass-card';
     card.style.padding = '2rem';
-    card.style.gridColumn = 'span 3';
+    card.style.gridColumn = '1 / -1';
     card.style.maxWidth = '750px';
     card.style.margin = '0 auto';
     
@@ -588,7 +588,7 @@ function initStoragePanel() {
       <div class="grid" style="grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:2rem; margin-bottom:2rem;">
         <div>
           <h4 style="font-size:1rem; margin-bottom:0.75rem; color:var(--text-secondary);">Storage Allocation Parameters</h4>
-          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem; color:var(--text-secondary); word-break:break-word;">
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem; color:var(--text-secondary); word-break:break-word;">
             <li>Intake Location: <strong class="text-primary">${storageItem.vault}</strong></li>
             <li>Vehicle Reg: <strong class="text-primary">${storageItem.vehicle}</strong></li>
             <li>Vault Category: <strong class="text-primary">${storageItem.type}</strong></li>
@@ -599,7 +599,7 @@ function initStoragePanel() {
         
         <div>
           <h4 style="font-size:1rem; margin-bottom:0.75rem; color:var(--text-secondary);">Live Diagnostics Telemetry</h4>
-          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem; color:var(--text-secondary); word-break:break-word;">
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem; color:var(--text-secondary); word-break:break-word;">
             <li>Battery Voltage: <strong style="color:var(--color-success);"><i class="fas fa-battery-three-quarters"></i> ${storageItem.battery}</strong></li>
             <li>Environmental Humidity: <strong class="text-primary">${storageItem.humidity}</strong></li>
             <li>Automatic Billing: <strong class="text-primary">$${storageItem.cost.toFixed(2)} / month</strong></li>
